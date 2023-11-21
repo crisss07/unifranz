@@ -1,0 +1,346 @@
+﻿@font-face {
+            font-family: 'ArialMTBlack';
+            src: url('fonts/Arial-MT-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+@font-face {
+            font-family: 'Montserrat-Regular';
+            src: url('fonts/Montserrat-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+@font-face {
+            font-family: 'Montserrat-Medium';
+            src: url('fonts/Montserrat-Medium.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+@font-face {
+            font-family: 'Montserrat-Bold';
+            src: url('fonts/Montserrat-Bold.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+:root {
+  --color-principal: #fa501e;
+  --color-principal-2: #13064f;
+  --color-principal-3: #0B032E;
+  --color-principal-4: #7b7b7b;
+}
+.colort-1{
+    color: var(--color-principal);
+}
+.colort-2{
+    color: var(--color-principal-2);
+}
+.colort-3{
+    color: var(--color-principal-3);
+}
+.colort-4{
+    color: var(--color-principal-4);
+}
+.fondo-c1{
+	background-color: var(--color-principal);
+}
+.fondo-c2{
+	background-color: var(--color-principal-2);
+}
+.fondo-c3{
+	background-color: var(--color-principal-3);
+}
+	
+.montserrat-bold{
+	font-family: 'Montserrat-Bold', Arial, sans-serif;
+}		
+.montserrat-regular{
+	font-family: 'Montserrat-Regular', Arial, sans-serif;
+}	
+.montserrat-medium{
+	font-family: 'Montserrat-Medium', Arial, sans-serif;
+}	
+.arialmt-b{
+	font-family: 'ArialMTBlack', Arial, sans-serif;
+}	
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+
+.menu {
+    width: 100%;
+    height: 80px;
+    background-color: rgba(11, 3, 46, 0.9); /* Cambié la transparencia a 0.6 para mayor visibilidad de la imagen */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fija el menú en la parte superior de la pantalla */
+    top: 0;
+    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+}
+	.navbar-toggler-custom {
+        border-color: white;
+        color: white;
+    }
+
+    .navbar-toggler-custom .navbar-toggler-icon::before,
+    .navbar-toggler-custom .navbar-toggler-icon::after {
+        background-color: var(--color-principal); /* Cambia el color de las líneas a tu preferencia */
+		color: var(--color-principal);
+    }
+	.navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.bienvenidos{
+    font-size: 48px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.mensaje-1{
+    font-size: 15px;
+	line-height: 18px;
+	text-align:justify;
+}
+.navbar-nav .nav-link {
+        margin-right: 10px; /* Ajusta el valor según tus necesidades para el espacio a la derecha */
+        margin-left: 10px;  /* Ajusta el valor según tus necesidades para el espacio a la izquierda */
+		color:white;
+    }
+
+
+.navbar-nav .nav-link:hover {
+    /*background-color: #f0f0f0;*/
+    color: var(--color-principal);
+    cursor: pointer;
+}
+
+
+.content {
+    position: relative;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.blocks-container {
+    /*background-color: #f3f3f3;*/
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.img-estudiantes {
+    width: 90%;
+    object-fit: cover;
+    margin-top: 70px; /* Separación arriba" */
+}
+
+.img-sesion {
+    width: 70%;
+    object-fit: cover;
+    margin-top: 30px; /* Separación arriba" */
+}
+
+.blocks-container-feria {
+    background-color: white;
+    display: flex;
+    padding: 80px 0;
+}
+
+.block-feria{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.bd{
+    font-size: 45px;
+	line-height:27px;
+    font-weight: bold;
+}
+
+.bd-numero{
+    font-size: 185px;
+	line-height:150px;
+    font-weight: bold;
+}
+
+	.carousel-item {
+		/* border:2px solid gray; */
+	}
+	.carousel-indicators li {
+        background-color: #e2e2e2;
+        border-radius: 50%; /* Hace que los indicadores sean redondos */
+        width: 12px; /* Ajusta el ancho según tus preferencias */
+        height: 12px; /* Ajusta la altura según tus preferencias */
+        margin-right: 6px; /* Ajusta el espacio entre los indicadores según tus preferencias */
+        margin-left: 6px; /* Ajusta el espacio entre los indicadores según tus preferencias */
+        cursor: pointer;
+    }
+
+    .carousel-indicators .active {
+        width: 14px; /* Ajusta el ancho del indicador activo según tus preferencias */
+        height: 14px; /* Ajusta la altura del indicador activo según tus preferencias */
+        background-color: var(--color-principal) !important;
+    }
+
+.texto-p{
+    text-align: center;
+    font-size: 40px;
+	margin-bottom:-5px;
+}
+
+.mas-chica{
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+
+.imagen-barra{
+    width: 3%;
+    height: 5%;
+}
+
+
+/*styles login*/
+ #ocultar_celular {
+      display: none; /* Oculta el div por defecto */
+  }
+
+  #ocultar_email {
+      display: none; /* Oculta el div por defecto */
+  }
+
+  #ocultar_contrasena {
+      display: none; /* Oculta el div por defecto */
+  }
+
+  #ocultar_btn_registrar {
+      display: none; /* Oculta el div por defecto */
+  }
+
+  #mensaje_registro{
+      display: none; /* Oculta el div por defecto */
+  }
+  .color-link{
+    color: #EF6525; /* Cambia el color del texto a rojo (#ff0000) */
+    text-decoration: none;
+  }
+  .panel   {
+    background-color: #fff;
+    border-radius: 15px;
+  }
+
+  .panel__left-title {
+    /*font-family: Montserrat-SemiBold;*/
+    font-size: 1.5rem;
+    color: #EF6525;
+  }
+  .texto-registro{
+    /*font-family: Montserrat-SemiBold;*/
+    font-size: 1rem;
+    color: #737373;
+    text-align: justify;
+  }
+  .panel__left-title-logo {
+    width: 40px;
+    height: auto;
+    padding-right: 5px;
+  }
+
+  .panel__left-body {
+    padding: 30px 0px;  
+  }
+  .form-group label {  
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+  input::placeholder {
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+  .btn-primary {
+    background-color: #EF6525 !important;
+    border: #ff5500 !important;
+    font-size: 0.9rem !important;
+    font-weight: 400 !important;
+  }
+
+  .panel__left-footer a {
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+  .panel__right {
+    /*width: 50%;*/
+    height: auto; /* Ajusta la altura según tus necesidades */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 15px 0 0 15px;
+  }
+
+  .panel__right-title {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  .panel__left-img {
+    position: absolute;
+    bottom: 1.8rem;
+    left: 0;
+  }
+  .panel__left-img svg {
+    width: 50%;
+    height: auto;
+  }
+  .dato-mensaje{
+    color: red; 
+    font-size: 15px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+  }
+/*fin style login*/
+
+
+
+/* Media Query para pantallas más pequeñas */
+@media screen and (max-width: 600px) {
+    .bienvenidos {
+        font-size: 42px; 
+    }
+	.navbar-nav .nav-link {
+		background-color: rgba(255, 255, 255, 0.9);
+        margin-right: 20px; /* Ajusta el valor según tus necesidades para el espacio a la derecha */
+        margin-left: 20px;  /* Ajusta el valor según tus necesidades para el espacio a la izquierda */
+		padding-left: 10px;
+		color:black;
+    }
+	.navbar-nav .nav-link:hover {
+		/*background-color: #f0f0f0;*/
+		color: var(--color-principal);
+		cursor: pointer;
+	}
+	
+	.bd{
+		font-size: 40px;
+		line-height:27px;
+		font-weight: bold;
+	}
+
+	.bd-numero{
+		font-size: 150px;
+		line-height:150px;
+		font-weight: bold;
+	}
+	
+}

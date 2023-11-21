@@ -1,0 +1,5 @@
+{
+    "require": {
+        "illuminate/hashing": "^10.32"
+    }
+}

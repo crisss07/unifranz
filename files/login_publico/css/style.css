@@ -1,0 +1,119 @@
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url('../fonts/montserrat/Montserrat-Medium.ttf'); 
+}
+
+@font-face {
+  font-family: Montserrat-SemiBold;
+  src: url('../fonts/montserrat/Montserrat-SemiBold.ttf'); 
+}
+
+
+html, 
+  body {
+    height: 100%;
+    width: 100%;
+    background-color: #f5f5f5 !important;  
+    display: flex;
+    align-items: center !important;    
+  }
+
+  #ocultar_celular {
+      display: none; /* Oculta el div por defecto */
+  }
+
+  #ocultar_email {
+      display: none; /* Oculta el div por defecto */
+  }
+
+  #ocultar_contrasena {
+      display: none; /* Oculta el div por defecto */
+  }
+
+  #ocultar_btn_registrar {
+      display: none; /* Oculta el div por defecto */
+  }
+
+  #mensaje_registro{
+      display: none; /* Oculta el div por defecto */
+  }
+  .color-link{
+    color: #EF6525; /* Cambia el color del texto a rojo (#ff0000) */
+    text-decoration: none;
+  }
+  .panel   {
+    background-color: #fff;
+    border-radius: 15px;
+  }
+
+  .panel__left-title {
+    font-family: Montserrat-SemiBold;
+    font-size: 1.5rem;
+    color: #EF6525;
+  }
+  .texto-registro{
+    font-family: Montserrat-SemiBold;
+    font-size: 1rem;
+    color: #737373;
+    text-align: justify;
+  }
+  .panel__left-title-logo {
+    width: 40px;
+    height: auto;
+    padding-right: 5px;
+  }
+
+  .panel__left-body {
+    padding: 30px 0px;  
+  }
+  .form-group label {  
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+  input::placeholder {
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+  .btn-primary {
+    background-color: #EF6525 !important;
+    border: #ff5500 !important;
+    font-size: 0.9rem !important;
+    font-weight: 400 !important;
+  }
+
+  .panel__left-footer a {
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+  .panel__right {
+    /*width: 50%;*/
+    height: auto; /* Ajusta la altura según tus necesidades */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 15px 0 0 15px;
+  }
+
+  .panel__right-title {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  .panel__left-img {
+    position: absolute;
+    bottom: 1.8rem;
+    left: 0;
+  }
+  .panel__left-img svg {
+    width: 50%;
+    height: auto;
+  }
+  .dato-mensaje{
+    color: red; 
+    font-size: 15px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+  }
