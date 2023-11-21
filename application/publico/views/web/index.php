@@ -167,7 +167,7 @@
 						<h2>LA PAZ <span class="colort-1">|</span> EL ALTO</h2>
 					</div>
 					<div>
-						<h5 class="colort-1 montserrat-bold">Jueves 23 de Noviembre</h5>
+						<h5 class="colort-1 montserrat-bold">Viernes 24 de Noviembre</h5>
 						<?php foreach ($charlas as $charla): ?>
 						<br>
 						<div class="row justify-content-center m-0 b-0 montserrat-medium">
