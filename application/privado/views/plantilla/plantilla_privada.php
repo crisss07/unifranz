@@ -31,7 +31,14 @@
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/plug-ins/1.10.24/i18n/Spanish.json"></script>
     <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
-
+    <style type="text/css">
+        #miTabla{
+            font-size: 12px;
+        }
+        .dataTables_info{
+            font-size: 13px;
+        }
+    </style>
 
 </head>
 
@@ -151,12 +158,20 @@
                             <a href="<?php echo $this->tool_entidad->sitioadmin().'Charla'; ?>"><i class="mdi mdi-format-list-bulleted-type"></i><span class="hide-menu">Charlas</span></a>
                         </li>
                         <li>
-                            <a href="#"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Usuarios</span></a>
+                            <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Usuarios</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="<?php echo $this->tool_entidad->sitioadmin().'UsuariosAlumni'; ?>">Alumni</a></li>
+                                <li><a href="#">Empresas</a></li>
+                                <li><a href="#">Administradores</a></li>
+                            </ul>
                         </li>
+                        <!-- <li>
+                            <a href="<?php echo $this->tool_entidad->sitioadmin().'UsuariosAlumni'; ?>"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Usuarios</span></a>
+                        </li> -->
                         <li>
                             <a href="#"><i class="mdi mdi-account-card-details"></i><span class="hide-menu">Alumnos Destacados</span></a>
                         </li>
-                        <!-- <li>
+                      <!--   <li>
                             <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Inbox</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="app-email.html">Mailbox</a></li>

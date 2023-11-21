@@ -170,11 +170,9 @@ class Login extends CI_Controller {
 
     }
 
-    public function contras(){
-        $opciones = [
-            'cost' => 10,
-        ];
-        echo password_hash("vane12345678", PASSWORD_BCRYPT, $opciones)."\n";
+    public function contras($contrasena){
+        $hash = password_hash($contrasena, PASSWORD_BCRYPT);
+        echo $hash;
     }
 
     public function ver(){

@@ -1,14 +1,14 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class CharlaModel extends CI_Model {
+class UsuariosAlumniModel extends CI_Model {
 
-    public function getDatosCharlas() {
-        $this->db->select('cha.*, COUNT(ic.charla_id) as numero_inscritos');
-        $this->db->from('charlas as cha');
-        $this->db->join('inscritos_charlas as ic', 'cha.id = ic.charla_id', 'left');
-        $this->db->where('cha.estado', 'activo');
-        $this->db->group_by('cha.id'); // Corregir para agrupar por el ID de charla
-        $this->db->order_by('cha.id', 'DESC');
+    public function getDatosUsuariosAlumni() {
+        $this->db->select('ua.id, ua.nombres, ua.apellidos, ua.ci, ua.celular, ua.email, ua.semestre, se.sede, ca.carrera, ro.rol, ua.estado');
+        $this->db->from('usuarios_alumni as ua');
+        $this->db->join('sede as se', 'ua.sede_id = se.id');
+        $this->db->join('carrera as ca', 'ua.carrera_id = ca.id');
+        $this->db->join('roles as ro', 'ua.rol_id = ro.id');
+        $this->db->where('ua.estado', 'activo');
         $resultado = $this->db->get()->result();
         return $resultado;
     }

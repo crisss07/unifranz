@@ -1,8 +1,4 @@
-<style type="text/css">
-    #miTabla{
-        font-size: 12px;
-    }
-</style>
+
 <!-- ==========================CONTENIDO========================== --> 
 <div class="row justify-content-center">
 	<div class="col-12">
@@ -46,7 +42,7 @@
                                         <!-- <td><?php echo $hi . ' - ' .  $hf; ?></td> -->
                                         <td><?php echo $value->fecha; ?></td>
                                         <?php if ($value->numero_inscritos > 0): ?>
-                                        <td><a href="#"><?php echo $value->numero_inscritos; ?></a></td>
+                                        <td><a href="<?php echo $this->tool_entidad->sitioadmin(); ?>Charla/inscritos/<?php echo base64_encode($value->id); ?>"><?php echo $value->numero_inscritos; ?></a></td>
                                         <?php else: ?>
                                         <td><?php echo $value->numero_inscritos; ?></td>
                                         <?php endif ?>
