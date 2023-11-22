@@ -31,12 +31,31 @@ class Inicio extends CI_Controller {
                 $_SESSION['rol_id'] = $user->rol_id;
                 $_SESSION['rol'] = $user->rol;
             }
-        	$contenido['hola'] = 'hola';
-			
 			$contenido['charlas'] = $this->ProgramasModel->getProgramas();
 			$data['contenido'] = $this->load->view('inicio/inicio', $contenido, true);
 			$this->load->view('plantilla/plantilla', $data);
             // echo 'hola desde pagina inicio '.$_SESSION['nombres'];
+        }
+	}
+	
+	public function empresas()
+	{
+		if (!isset($_SESSION['alumni_id'])){
+            $this->load->view('login/login');
+        }
+        else {
+            if (!isset($_SESSION['nombres'])) {
+                $user_id = $_SESSION['alumni_id'];
+                $user = $this->LoginModel->getDatosUsuario($user_id);
+                $_SESSION['nombres'] = $user->nombres;
+                $_SESSION['apellidos'] = $user->apellidos;
+                $_SESSION['email'] = $user->email;
+                $_SESSION['rol_id'] = $user->rol_id;
+                $_SESSION['rol'] = $user->rol;
+            }
+			$contenido['charlas'] = $this->ProgramasModel->getProgramas();
+			$data['contenido'] = $this->load->view('inicio/inicio-empresas', $contenido, true);
+			$this->load->view('plantilla/plantilla', $data);
         }
 	}
 	
