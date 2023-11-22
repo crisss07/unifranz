@@ -23,16 +23,20 @@ class Inicio extends CI_Controller {
             $this->load->view('login/login');
         }
         else {
-            if (!isset($_SESSION['nombres'])) {
-                $user_id = $_SESSION['alumni_id'];
-                $user = $this->LoginModel->getDatosUsuario($user_id);
-                $_SESSION['nombres'] = $user->nombres;
-                $_SESSION['rol'] = $user->rol;
+            if ($_SESSION['rol_id'] != 3) {
+                if (!isset($_SESSION['nombres'])) {
+                    $user_id = $_SESSION['alumni_id'];
+                    $user = $this->LoginModel->getDatosUsuario($user_id);
+                    $_SESSION['nombres'] = $user->nombres;
+                    $_SESSION['rol'] = $user->rol;
+                }
+    			$contenido['charlas'] = $this->ProgramasModel->getProgramas();
+    			$data['contenido'] = $this->load->view('inicio/inicio', $contenido, true);
+    			$this->load->view('plantilla/plantilla', $data);
+                // echo 'hola desde pagina inicio '.$_SESSION['nombres'];
+            } else {
+                redirect('Inicio/empresas');
             }
-			$contenido['charlas'] = $this->ProgramasModel->getProgramas();
-			$data['contenido'] = $this->load->view('inicio/inicio', $contenido, true);
-			$this->load->view('plantilla/plantilla', $data);
-            // echo 'hola desde pagina inicio '.$_SESSION['nombres'];
         }
 	}
 	
