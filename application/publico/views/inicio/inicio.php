@@ -43,6 +43,8 @@
 						<h5 class="colort-1 montserrat-bold">Viernes 24 de Noviembre</h5>
 						
 						<br>
+						
+						<!---
 						<div class="row justify-content-center m-0 b-0 montserrat-medium" style="text-align:left; line-height:16px;padding-left:10px;">
 							<div class="col-lg-3 col-md-3 col-12">
 							<p class="colort-4">
@@ -79,6 +81,8 @@
 							<div class="col-lg-2 col-md-2 col-3">
 							</div>
 						</div><br>
+						----->
+						
 						<div class="row justify-content-center m-0 b-0 montserrat-medium" style="text-align:left; line-height:16px;padding-left:10px;">
 							<div class="col-lg-3 col-md-3 col-12">
 							<p class="colort-4">
@@ -88,19 +92,23 @@
 							<div class="col-lg-1 col-md-1 col-1" style="border-left:1px solid var(--color-principal-4);">
 							</div>
 							<div class="col-lg-7 col-md-7 col-8" style="text-align:left; line-height:16px;">
-								<p class="colort-1">INAUGURACION</p>
+								<p class="colort-1">INAUGURACIÓN</p>
 								<p class="colort-4">
-									<b>Palabras de Bienvenida a cargo de Pedro Sáenz Muñoz</b><br>
-									PhD.c Vicerrector Sede La Paz<br><br>
-									<b>Palabras invitado Especial Fernando Aramayo</b><br>
-									Coordinador de Programas y Gestión Institucional del PNUD<br><br>
-									<b>Palabras Invitado Especial Ing. Pablo Camacho</b><br>
-									Presidente Cámara Nacional de Industrias<br><br>
-									<b>Palabras Invitado Especial Ing. Jaime Ascarrunz</b><br>
-									Presidente Cámara Nacional de Comercio<br><br>
-									<b>Brindis de Honor a Cargo de Lic. Eve Gomez Ferrufino</b><br>
+									Palabras de Bienvenida a cargo de:<br><br>
+									<b>Pedro Sáenz Muñoz PhD.c</b><br>
+									Vicerrector Sede La Paz<br><br>
+									<b>Lic. Eve Gomez Ferrufino</b><br>
 									Vicerrectora Sede El Alto<br><br>
-									<b>Corte de Cinta</b>
+									<b>Lic. Ninoska Peñaloza Monzón</b><br>
+									Directora Nacional de Servicios Estudiantiles<br><br>
+									<b>Diego Suárez</b><br>
+									Jefe de Experimentación - Laboratorio de Aceleración
+									PNUD<br><br>
+									<b>Ing. Jaime Ascarrunz</b><br>
+									Presidente CNC<br><br>
+									<b>Lic. Pablo Camacho</b><br>
+									Presidente CNI<br><br>
+									Autoridades e Invitados Especiales</b><br>
 								</p>
 							</div>
 							<div class="col-lg-1 col-md-1 col-1">
@@ -158,7 +166,7 @@
 			<div class="d-block d-lg-none d-md-none" style="hight:40px;">&nbsp;</div>
 			<p class="bd"><b>EN LA FERIA</b></p>
             <p class="bd"><b>PARTICIPAN</b></p>
-            <p class="bd-numero colort-1"><b>+50</b></p>
+            <p class="bd-numero colort-1"><b>+60</b></p>
             <p class="bd"><b>EMPRESAS</b></p>
 			<div class="d-block d-lg-none d-md-none" style="hight:40px;">&nbsp;</div>
 		</div>

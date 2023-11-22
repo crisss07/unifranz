@@ -58,8 +58,8 @@
 					</a>
 				  </div> 
 				  <div class="col-lg-1 col-md-1 col-2 p-1">
-					<a href="https://twitter.com/UnifranzBolivia" target="_blank">
-					  <img src="<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/rrss/tw.png" class="img-rrss" alt="unifranz">
+					<a href="https://www.instagram.com/unifranz/?hl=es" target="_blank">
+					  <img src="<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/rrss/ig.png" class="img-rrss" alt="unifranz">
 					</a>
 				  </div> 
 				  <div class="col-lg-1 col-md-1 col-2 p-1">
@@ -68,8 +68,8 @@
 					</a>
 				  </div> 
 				  <div class="col-lg-1 col-md-1 col-2 p-1">
-					<a href="https://www.instagram.com/unifranz/?hl=es" target="_blank">
-					  <img src="<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/rrss/ig.png" class="img-rrss" alt="unifranz">
+					<a href="https://twitter.com/UnifranzBolivia" target="_blank">
+					  <img src="<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/rrss/tw.png" class="img-rrss" alt="unifranz">
 					</a>
 				  </div> 
 				</div>
