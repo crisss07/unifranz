@@ -176,37 +176,4 @@ class Login extends CI_Controller {
         echo $hash;
     }
 
-    public function ver(){
-        $dato = password_hash("vane12345678", PASSWORD_BCRYPT);
-        if (password_verify('vane12345678', $dato)) {
-            echo 'La contraseña es válida!';
-        } else {
-            echo 'La contraseña no es válida.';
-        }
-    }
-
-    public function veri() {
-        $ci = 9112739;
-        $contrasena = '123456';
-        $this->db->select('id, contrasena');
-        $this->db->from('usuarios_alumni');
-        $this->db->where('ci', $ci);
-        $this->db->where('estado', 'activo');
-        $resultado = $this->db->get()->row();
-
-        if (password_verify($contrasena, $resultado->contrasena)) {
-           $respuesta = array('estado'=>true, 'id'=>$resultado->id);
-            // return $respuesta; // Credenciales válidas
-        } else {
-            $respuesta = array('estado'=>false);
-            // return $respuesta; // Credenciales inválidas
-        }
-        var_dump($respuesta);
-    }
-
-    public function webb(){
-        $this->load->view('login/web');
-    }
-    
-
 }
