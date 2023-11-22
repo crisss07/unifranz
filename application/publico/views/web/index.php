@@ -55,7 +55,7 @@
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="<?php echo $this->tool_entidad->sitioindex(); ?>Login">Alumni</a>
-          <a class="dropdown-item" href="<?php echo $this->tool_entidad->sitioindex(); ?>Login">Empresa</a>
+          <a class="dropdown-item" href="<?php echo $this->tool_entidad->sitioindex(); ?>LoginEmpresa">Empresa</a>
         </div>
       </li>
     </ul>

@@ -27,7 +27,7 @@
 <!-- Modal -->
 	<div class="container-fluid m-0 p-0" style="background-color:#f3f3f3;">
 	<div class="content" style="margin-top:80px;" data-aos="fade">
-        <img src="<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/cab-interna.png" class="w-100" alt="unifranz" >
+        <img src="<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/cab-empresas.png" class="w-100" alt="unifranz" >
 	</div>
 	</div>
 	<div class="container-fluid m-0 p-0" style="background-color:#f3f3f3;" >
