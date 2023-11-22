@@ -266,39 +266,6 @@
           });
       }
 
-      function recuperarContrasena() {
-        var carnetIdentidad = $('#carnetIdentidad').val();
-        if (carnetIdentidad.trim() === '') {
-          var elementoMensajeModal = document.getElementById("mensaje_modal");
-          var codigoHTMLModal = `<span class="dato-mensaje">Por favor, ingrese su Carnet de Identidad.</span><br><br>`;
-          elementoMensajeModal.innerHTML = codigoHTMLModal;
-          return;
-        }
-        var enlace  = '<?php echo $this->tool_entidad->sitioindex(); ?>';
-        $.ajax({
-            url: enlace+'Login/ajax_recuperar',
-            type: 'POST',
-            dataType: 'json',
-            data: { carnetIdentidad: carnetIdentidad },
-            success: function(data) {
-                if(data.error){
-                    var elementoMensaje = document.getElementById("mensaje_modal");
-                    var codigoHTML = `<span class="dato-mensaje"> ${data.message} </span><br><br>`;
-                    elementoMensaje.innerHTML = codigoHTML;
-                } else {
-
-                  Swal.fire({
-                    title: "Correcto!",
-                    text: data.message,
-                    icon: "success",
-                    confirmButtonColor: '#3085d6',
-                    confirmButtonText: 'Ok'
-                  });
-                  $('#carnetIdentidad').val('');
-                }
-            }
-        });
-      }
     </script>
 </body>
 </html>

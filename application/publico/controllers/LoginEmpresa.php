@@ -17,7 +17,7 @@ class LoginEmpresa extends CI_Controller {
             $this->load->view('login_empresa/login');
         }
         else {
-            redirect('Inicio');
+            redirect('Inicio/empresas');
         }
     }
 

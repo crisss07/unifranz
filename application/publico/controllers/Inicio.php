@@ -7,6 +7,7 @@ class Inicio extends CI_Controller {
 		$this->load->helper(array('url','form','html'));
         $this->load->model('InicioModel');
         $this->load->model('LoginModel');
+        $this->load->model('LoginEmpresaModel');
         $this->load->model('ProgramasModel');
         $this->load->library('form_validation');
         session_start();
@@ -26,9 +27,6 @@ class Inicio extends CI_Controller {
                 $user_id = $_SESSION['alumni_id'];
                 $user = $this->LoginModel->getDatosUsuario($user_id);
                 $_SESSION['nombres'] = $user->nombres;
-                $_SESSION['apellidos'] = $user->apellidos;
-                $_SESSION['email'] = $user->email;
-                $_SESSION['rol_id'] = $user->rol_id;
                 $_SESSION['rol'] = $user->rol;
             }
 			$contenido['charlas'] = $this->ProgramasModel->getProgramas();
@@ -42,20 +40,21 @@ class Inicio extends CI_Controller {
 	{
 		if (!isset($_SESSION['alumni_id'])){
             $this->load->view('login/login');
-        }
-        else {
-            if (!isset($_SESSION['nombres'])) {
-                $user_id = $_SESSION['alumni_id'];
-                $user = $this->LoginModel->getDatosUsuario($user_id);
-                $_SESSION['nombres'] = $user->nombres;
-                $_SESSION['apellidos'] = $user->apellidos;
-                $_SESSION['email'] = $user->email;
-                $_SESSION['rol_id'] = $user->rol_id;
-                $_SESSION['rol'] = $user->rol;
+        } else {
+            if ($_SESSION['rol_id'] == 3) {
+                if (!isset($_SESSION['nombres'])) {
+                    $user_id = $_SESSION['alumni_id'];
+                    $user = $this->LoginEmpresaModel->getDatosUsuario($user_id);
+                    $_SESSION['nombres'] = $user->razon_social;
+                    $_SESSION['rol'] = $user->rol;
+                }
+                $contenido['charlas'] = $this->ProgramasModel->getProgramas();
+                $data['contenido'] = $this->load->view('inicio/inicio-empresas', $contenido, true);
+                $this->load->view('plantilla/plantilla', $data);
+            } else {
+                redirect('Inicio');
             }
-			$contenido['charlas'] = $this->ProgramasModel->getProgramas();
-			$data['contenido'] = $this->load->view('inicio/inicio-empresas', $contenido, true);
-			$this->load->view('plantilla/plantilla', $data);
+            
         }
 	}
 	

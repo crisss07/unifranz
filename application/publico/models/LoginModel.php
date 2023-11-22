@@ -3,7 +3,7 @@
 class LoginModel extends CI_Model {
 
     public function check_login($ci, $contrasena) {
-        $this->db->select('id, contrasena');
+        $this->db->select('id, rol_id, contrasena');
         $this->db->from('usuarios_alumni');
         $this->db->where('ci', $ci);
         $this->db->where('estado', 'activo');
@@ -11,7 +11,7 @@ class LoginModel extends CI_Model {
 
         if ($resultado) {
             if (password_verify($contrasena, $resultado->contrasena)) {
-               $respuesta = array('estado'=>true, 'id'=>$resultado->id);
+               $respuesta = array('estado'=>true, 'id'=>$resultado->id, 'rol_id'=>$resultado->rol_id);
                 return $respuesta; // Credenciales válidas
             } else {
                 $respuesta = array('estado'=>false);
