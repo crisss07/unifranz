@@ -81,7 +81,7 @@
 		<button type="submit" class="text-white btn-buscar" style="">BUSCAR TALENTO</button>
 		</div>
     </div>
-	<div class="row justify-content-center m-0 b-0 montserrat-bold d-flex align-items-center f-estudiantes" style="padding-top:30px;padding-bottom:30px;line-height:16px;">   
+	<div class="row justify-content-center m-0 b-0 montserrat-bold d-flex align-items-center f-estudiantes" style="padding-top:30px;padding-bottom:10%;line-height:16px;">   
 		<?php foreach ($destacados as $d): ?>	
         <div class="col-lg-3 col-md-3 col-11 text-center text-white" style="background-color: rgba(255, 255, 255, 0.6); backdrop-filter: blur(5px); padding:10px 15px 10px 15px; border-radius:30px; margin:7px;">
 			<br>
@@ -106,7 +106,6 @@
 		</div>
 	</div> 
 	
-    </div>
 	
 	
 <style>

@@ -40,11 +40,8 @@
 		<?php echo $contenido; ?>
 	</div>
 </div>
-
-	<br><br><br><br><br><br>
 	
-	
-		<div class="row justify-content-center m-0 b-0 footer-uni">        
+		<div class="row justify-content-center m-0 b-0 footer-uni" style="background-color:#f3f3f3;">        
         <div class="col-lg-4">
 		</div>      
         <div class="col-lg-7 col-md-7 col-11 text-end">
