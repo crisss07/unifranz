@@ -8,7 +8,7 @@
 	<div class="col-12">
         <div class="card wizard-content">
            	<div class="card">
-                <div class="card-header" style="background-color: #5c5c5c;">
+                <div class="card-header" style="background-color: #13064f;">
                     <h4 class="mb-0 text-white">Listado de Inscritos - Charlas</h4>
                 </div>
             </div>
