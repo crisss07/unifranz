@@ -57,7 +57,12 @@
 		</b><br><br>
 		</h5>
 	</div>    
-	</div>    
+	</div> 
+	<div class="row justify-content-center m-0 b-0 d-flex align-items-center p-2" style="padding-top:60px;padding-bottom:60px;" data-aos="fade-up" data-aos-anchor-placement="center-bottom">    
+			<div class="col-lg-9 col-md-9 col-11 text-center montserrat-regular">
+				<h4 class="colort-1">¡Prepárate para descubrir oportunidades, ampliar tu red y dar el siguiente paso en tu carrera profesional en la <b>Feria de Empleabilidad UNIFRANZ 2023</b>!</h4>
+			</div>    
+		</div>  	
 	</div> 
 	<div class="container-fluid m-0 p-0" style="background-color:#f3f3f3;">	
 	<div class="row justify-content-center m-0 b-0 montserrat-regular d-flex align-items-center p-2" style="padding-top:60px;padding-bottom:60px;">        

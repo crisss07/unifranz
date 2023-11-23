@@ -61,53 +61,85 @@
     </ul>
   </div>
 </nav>
-	<div class="content" style="margin-top:80px;" data-aos="fade">
-        <img src="<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/cabecera.png" class="w-100" alt="unifranz" >
+	<div class="content bg-white" style="margin-top:80px;" data-aos="fade">
+        <img src="<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/cabecera-min.png" class="w-100" alt="unifranz" >
 	</div>
 	<div class="d-none d-sm-block" style="margin-bottom:-40px;">&nbsp;</div>
-	<div class="container">
+	<div class="container-fluid bg-white">
 		<div class="row justify-content-center m-0 b-0 montserrat-regular d-flex align-items-center" data-aos="fade-up" data-aos-delay="500">
-			<div class="col-lg-12 col-md-12 col-11 p-4 colort-4">
-				<h3 class="arialmt-b colort-1">¡Explora Tu Futuro Profesional en la Feria de Empleabilidad UNIFRANZ 2023!</h3>
+			<div class="col-lg-8 col-md-9 col-11 p-4 colort-4 text-center">
+				<h4 class="arialmt-b colort-1">¡Explora Tu Futuro Profesional<br> en la Feria de Empleabilidad UNIFRANZ 2023!</h4>
 				<p>
 				Damos la bienvenida a estudiantes y empresas y público en general a la Feria de Empleabilidad UNIFRANZ 2023, un evento que conecta talento con grandes oportunidades profesionales.
 				<br>
 				<br>
-				Este año, nos enorgullece anunciar su realización en nuestras sedes en las siguientes fechas:<br><br>
-				<b>La Paz y El Alto: 24 de noviembre</b> - Real Plaza Hotel & Convention Center (Av. Arce nro. 2177)<br>
-				<b>Santa Cruz: 28 de noviembre</b> - Campus UNIFRANZ (Av. Busch esq. 2do Anillo, No. 1113)<br>
-				<b>Cochabamba: 8 de diciembre</b> - Campus UNIFRANZ (Calle: Av. Villarroel esq. c. Portales, No. 359)
-				</p>
-				<p class="colort-1 text-center"><b>¡Prepárate para descubrir oportunidades, ampliar tu red y dar el siguiente paso en tu carrera profesional en la Feria de Empleabilidad UNIFRANZ 2023!</b></p>
+				<b>
+				Este año, nos enorgullece anunciar su realización en nuestras sedes en las siguientes fechas:</b><br>
+				
 			</div>
 		</div>
+	</div>
+	<div class="contain fondo-c1">
+		<div class="row justify-content-center m-0 b-0 p-3 montserrat-medium d-flex align-items-center text-center" style="line-height:8px;">
+    <div class="col-lg-3 col-md-3 col-11 m-3 p-0 colort-4" data-aos="flip-up" data-aos-duration="700">
+        <h3 class="text-white"><b>LA PAZ / EL ALTO</b><br>
+            <b>24 de noviembre</b></h3>
+        <h4 class="colort-2"><b>10:00 a 18:00</b></h4><br>
+        <p class="colort-2"><b>Real Plaza Hotel & Convention Center</b></p>
+        <p class="colort-2">Av. Arce nro. 2177</p>
+    </div>
+    <div class="d-none d-md-flex d-lg-flex text-center align-items-center">
+		<p style="border-left: 1px solid white; height: 200px;"></p>
+	</div>
+    <div class="col-lg-3 col-md-3 col-11 m-3 p-0 colort-4" data-aos="flip-up" data-aos-duration="700">
+        <h3 class="text-white"><b>SANTA CRUZ</b><br>
+            <b>28 de noviembre</b></h3>
+        <h4 class="colort-2"><b>09:00 a 13:00</b></h4><br>
+        <p class="colort-2"><b>Campus UNIFRANZ</b></p>
+        <p class="colort-2">Av. Bush esq. 2do Anillo, nro. 111</p>
+    </div>
+    <div class="d-none d-md-flex d-lg-flex text-center align-items-center">
+		<p style="border-left: 1px solid white; height: 200px;"></p>
+	</div>
+    <div class="col-lg-3 col-md-3 col-11 m-3 p-0 colort-4" data-aos="flip-up" data-aos-duration="700">
+        <h3 class="text-white"><b>COCHABAMBA</b><br>
+            <b>08 de diciembre</b></h3>
+        <h4 class="colort-2"><b>10:00 a 16:00</b></h4><br>
+        <p class="colort-2"><b>Campus UNIFRANZ</b></p>
+        <p class="colort-2">Av. Villaroel esq. c. Portales, nro. 359</p>
+    </div>
+</div>
+
+	</div>
+	<div class="container-fluid fondo-c4">
 		<div class="row justify-content-center m-0 b-0 montserrat-regular d-flex align-items-center">
-			<div class="col-lg-5 col-md-5 col-11 p-4 colort-4" data-aos="fade-right"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine">
+			<div class="col-lg-4 col-md-4 col-11 p-4 colort-4" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
 				<h3 class="arialmt-b colort-2">¿Qué Puedes Esperar?</h3>
 				<p class="mensaje-1"><b>Oportunidades para insertarse en el mercado laboral </b>
 				Explora opciones de carrera con empresas de renombre en diversos sectores.<br><br>
-<b>Networking de Calidad</b><br> Conecta con profesionales y crea conexiones valiosas.<br><br>
-<b>Charlas Inspiradoras</b><br>Escucha a expertos de la industria compartiendo sus experiencias y consejos.
-</p>
+				<b>Networking de Calidad</b><br> Conecta con profesionales y crea conexiones valiosas.<br><br>
+				<b>Charlas Inspiradoras</b><br>Escucha a expertos de la industria compartiendo sus experiencias y consejos.
+				</p>
 			</div>
-			<div class="col-lg-4 col-md-4 col-11 text-center arialmt-b p-3" style="line-height:31px;" data-aos="fade-up"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine">
+			<div class="col-lg-3 col-md-3 col-11 text-center arialmt-b p-3" style="line-height:31px;" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
 				 <span class="colort-1" style="font-size:2.6em;">estudiantes</span> <br> 
 				 <span class="colort-1" style="font-size:2.8em;">egresados</span> <br> 
 				 <span class="colort-1" style="font-size:2.3em;">profesionales</span> <br> 
 				<span class="colort-2" style="font-size:2.6em;">UNIFRANZ</span><br>
 				<span class="montserrat-bold" style="font-size:0.6em;">LA PAZ - EL ALTO - COCHABAMBA - SANTA CRUZ</span>
 			</div>
-			<div class="col-lg-3 col-md-3 col-11 text-center" data-aos="flip-right"
-     data-aos-offset="300"
+			<div class="col-lg-3 col-md-3 col-11 text-center" data-aos="flip-right" data-aos-offset="300"
      data-aos-easing="ease-in-sine">
 				<img class="img-sesion" src="<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/iniciar_sesion.png" alt="Descripción de la imagen" >
 				<a class="montserrat-bold" style="color:var(--color-principal);" href="<?php echo $this->tool_entidad->sitioindex(); ?>Login/registro">REGISTRATE</a>
 			</div>
 		</div>
+		<div class="row justify-content-center m-0 b-0 d-flex align-items-center p-2" style="padding-top:60px;padding-bottom:60px;" data-aos="fade-up" data-aos-anchor-placement="center-bottom">    
+			<div class="col-lg-9 col-md-9 col-11 text-center montserrat-regular">
+				<br>
+				<h4 class="colort-1">¡Prepárate para descubrir oportunidades, ampliar tu red y dar el siguiente paso en tu carrera profesional en la <b>Feria de Empleabilidad UNIFRANZ 2023</b>!</h4>
+			</div>    
+		</div>  
 	</div>
 	<div style="margin-bottom:10px;" id="empresas">&nbsp;</div>
 	<div class="row justify-content-center m-0 b-0 montserrat-regular d-flex align-items-center bg-white"> 
