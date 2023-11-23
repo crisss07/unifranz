@@ -14,8 +14,9 @@ class Web extends CI_Controller {
     }
 
     public function index() {
-		$data['charlas'] = $this->ProgramasModel->getProgramas();
-        $this->load->view('web/index', $data);
+		$contenido['charlasLP'] = $this->ProgramasModel->getProgramas("La Paz - El Alto");
+    	$contenido['charlasSC'] = $this->ProgramasModel->getProgramas("Santa Cruz");
+        $this->load->view('web/index', $contenido);
     }
     
     public function p() {

@@ -89,7 +89,7 @@
         <p class="colort-2">Av. Arce nro. 2177</p>
     </div>
     <div class="d-none d-md-flex d-lg-flex text-center align-items-center">
-		<p style="border-left: 1px solid white; height: 200px;"></p>
+		<p style="border-left: 1px solid white; height: 160px;"></p>
 	</div>
     <div class="col-lg-3 col-md-3 col-11 m-3 p-0 colort-4" data-aos="flip-up" data-aos-duration="700">
         <h3 class="text-white"><b>SANTA CRUZ</b><br>
@@ -99,7 +99,7 @@
         <p class="colort-2">Av. Bush esq. 2do Anillo, nro. 111</p>
     </div>
     <div class="d-none d-md-flex d-lg-flex text-center align-items-center">
-		<p style="border-left: 1px solid white; height: 200px;"></p>
+		<p style="border-left: 1px solid white; height: 160px;"></p>
 	</div>
     <div class="col-lg-3 col-md-3 col-11 m-3 p-0 colort-4" data-aos="flip-up" data-aos-duration="700">
         <h3 class="text-white"><b>COCHABAMBA</b><br>
@@ -198,8 +198,8 @@
 	<div id="cronograma" style="margin-top:-120px;margin-bottom:120px;">
 	</div>
 	
-	<div class="row justify-content-center m-0 b-0 montserrat-regular d-flex align-items-center p-2" style="padding-top:60px;padding-bottom:60px;">        
-        <div class="col-lg-6 col-md-6 col-12 text-center">
+	<div class="row justify-content-center m-0 b-0 montserrat-regular p-2" style="padding-top:60px;padding-bottom:60px;">        
+        <div class="col-lg-5 col-md-5 col-12 text-center">
 			<div class="row justify-content-center m-0 b-0 montserrat-regular d-flex align-items-center" >   
 				<br><br>			
 				<div class="col-lg-12 col-md-12 col-11 bg-white" style="border-radius:30px 30px 0 0;">
@@ -210,7 +210,49 @@
 					</div>
 					<div>
 						<h5 class="colort-1 montserrat-bold">Viernes 24 de Noviembre</h5>
-						<?php foreach ($charlas as $charla): ?>
+						<?php foreach ($charlasLP as $charla): ?>
+						<br>
+						<div class="row justify-content-center m-0 b-0 montserrat-medium">
+							<div class="col-lg-3 col-md-6 col-12">
+							<p class="colort-4">
+							<?php echo $charla['horario']; ?>
+							</p>
+							</div>
+							<div class="col-lg-1 col-md-6 col-12" style="border-left:1px solid var(--color-principal-4);">
+							</div>
+							<div class="col-lg-8 col-md-6 col-12" style="text-align:left; line-height:18px;">
+								<p class="colort-1">CHARLA</p>
+								<b class="colort-4">
+								<?php echo $charla['tema']; ?>
+								</b>
+								<p class="colort-4">
+								<?php echo $charla['expositor']; ?>
+								</p>
+							</div>
+						</div>
+						<?php endforeach; ?>
+						<br>
+					</div>
+				</div>
+				<br><br>
+				<div class="col-lg-12 col-md-12 col-11 fondo-c1" style="border-radius:0 0 30px 30px;">
+					<br>
+					<br>
+				</div>
+			</div>
+		</div>
+        <div class="col-lg-5 col-md-5 col-12 text-center">
+			<div class="row justify-content-center m-0 b-0 montserrat-regular d-flex align-items-center" >   
+				<br><br>			
+				<div class="col-lg-12 col-md-12 col-11 bg-white" style="border-radius:30px 30px 0 0;">
+				<br>
+					<div class="text-center arialmt-b colort-2">
+						<h2 class="colort-1" style="line-height:20px;">PROGRAMA</h2>
+						<h2>SANTA CRUZ</h2>
+					</div>
+					<div>
+						<h5 class="colort-1 montserrat-bold">Martes 28 de Noviembre</h5>
+						<?php foreach ($charlasSC as $charla): ?>
 						<br>
 						<div class="row justify-content-center m-0 b-0 montserrat-medium">
 							<div class="col-lg-3 col-md-6 col-12">

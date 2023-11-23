@@ -30,7 +30,8 @@ class Inicio extends CI_Controller {
                     $_SESSION['nombres'] = $user->nombres;
                     $_SESSION['rol'] = $user->rol;
                 }
-    			$contenido['charlas'] = $this->ProgramasModel->getProgramas();
+    			$contenido['charlasLP'] = $this->ProgramasModel->getProgramas("La Paz - El Alto");
+    			$contenido['charlasSC'] = $this->ProgramasModel->getProgramas("Santa Cruz");
     			$data['contenido'] = $this->load->view('inicio/inicio', $contenido, true);
     			$this->load->view('plantilla/plantilla', $data);
                 // echo 'hola desde pagina inicio '.$_SESSION['nombres'];
