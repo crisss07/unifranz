@@ -33,7 +33,7 @@ class Login extends CI_Controller {
             $user = $this->LoginModel->check_login($ci, $contrasena);
             if ($user['estado']) {
                 $_SESSION['alumni_id'] = $user['id'];
-                $_SESSION['rol_id'] = $empresa['rol_id'];
+                $_SESSION['rol_id'] = $user['rol_id'];
                 $data = array('error' => false, 'message' => 'Inicio de sesión exitoso.');
             } else {
                 $data = array('error' => true, 'message' => 'Carnet de Identidad o contraseña incorrectos.');
