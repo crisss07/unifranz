@@ -54,11 +54,13 @@ class Inicio extends CI_Controller {
                     $_SESSION['nombres'] = $user->razon_social;
                     $_SESSION['rol'] = $user->rol;
                 }
+                $carreras = $this->DestacadosModel->getCarreras(1);
                 $dLP = $this->DestacadosModel->getDestacados(1);
                 $dSC = $this->DestacadosModel->getDestacados(2);
 				$destacados = array_merge($dLP , $dSC);
 				// print_r($this->reordenarD($destacados));exit();
                 $contenido['destacados'] = $this->reordenarD($destacados);
+                $contenido['carreras'] = $carreras;
                 $data['contenido'] = $this->load->view('inicio/inicio-empresas', $contenido, true);
                 $this->load->view('plantilla/plantilla', $data);
             } else {

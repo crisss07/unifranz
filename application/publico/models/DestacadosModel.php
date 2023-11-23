@@ -19,4 +19,17 @@ class DestacadosModel extends CI_Model {
 				return array(); // Devolver un array vacío si no hay resultados
 			}
 		}
+		public function getCarreras(){
+			$this->db->select('*');
+			$this->db->from('carrera');
+			$this->db->order_by('carrera', 'ASC');
+			$query = $this->db->get();
+			
+			// Verificar si hay resultados antes de devolverlos
+			if ($query->num_rows() > 0) {
+				return $query->result_array();
+			} else {
+				return array(); // Devolver un array vacío si no hay resultados
+			}
+		}
 }

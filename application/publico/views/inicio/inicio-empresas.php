@@ -59,26 +59,26 @@
 		</h6>
 	</div>    
 	</div> 	
-	<div class="row justify-content-center m-0 b-0 montserrat-bold d-flex align-items-center f-buscar" style="padding-top:30px;padding-bottom:30px;">        
+	<div class="row justify-content-center m-0 b-0 montserrat-medium d-flex align-items-center f-buscar" style="padding-top:30px;padding-bottom:30px;">        
         <div class="col-lg-3 col-md-3">&nbsp;</div>
-        <div class="col-lg-3 col-md-3 col-11 text-center text-white">
+        <div class="col-lg-3 col-md-3 col-11 text-start text-white">
 		<h6>SEDE UNIFRANZ</h6>
 		<select class="combo-blanco">
-			<option value="la-paz">La Paz</option>
-			<option value="el-alto">El Alto</option>
-			<option value="santa-cruz">Santa Cruz</option>
+			<option value="1">La Paz</option>
+			<option value="2">El Alto</option>
 		</select>
 		</div>
-		<div class="col-lg-3 col-md-3 col-11 text-center text-white">
+		<div class="col-lg-3 col-md-3 col-11 text-start text-white">
 		<h6 class="">CARRERA</h6>
 		<select class="combo-blanco">
-			<option value="la-paz">Administración de Empresas</option>
-			<option value="el-alto">Derecho</option>
+			<?php foreach ($carreras as $c): ?>	
+			<option name="carrera_u" value="<?php echo $c['id']; ?>"><?php echo $c['carrera']; ?></option>
+			<?php endforeach; ?>
 		</select>
 		</div>
 		 <div class="col-lg-3 col-md-3">&nbsp;</div>
 		<div class="col-lg-6 col-md-6 col-11 m-0 text-center text-white">
-		<button type="submit">BUSCAR TALENTO</button>
+		<button type="submit" class="text-white btn-buscar" style="">BUSCAR TALENTO</button>
 		</div>
     </div>
 	<div class="row justify-content-center m-0 b-0 montserrat-bold d-flex align-items-center f-estudiantes" style="padding-top:30px;padding-bottom:30px;line-height:16px;">   
@@ -138,6 +138,21 @@
     background-size: cover; /* Ajustar la imagen al tamaño del contenedor */
     background-position: center; /* Posición de la imagen en el contenedor */
 	background-attachment: fixed;
+}
+.combo-blanco{
+	padding: 10px; width: 100%; border: none; border-radius: 10px;color:var(--color-principal-4);background-color:$c3c3c3;
+}
+.btn-buscar{
+	padding:10px 30px; background: linear-gradient(to bottom,  #0c0635 0%,#1a1a60 100%);
+	border:none;
+	border-radius:10px;
+	cursor:pointer;
+}
+.btn-buscar:hover{
+	transform: scale(1.05);
+	background: linear-gradient(to top,  #0c0635 0%,#1a1a60 100%);
+	cursor:pointer;
+    transition: transform 0.3s, background 0.3s;
 }
 </style>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
