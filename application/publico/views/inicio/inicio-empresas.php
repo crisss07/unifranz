@@ -1,7 +1,7 @@
 <!-- fin login -->
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -9,15 +9,65 @@
         </button>
       </div>
       <div class="modal-body">
-        <h5 class="modal-title colort-1 montserrat-bold text-center">CHARLA</h5>
-        <h4 class="modal-title colort-2 montserrat-medium text-center" id="charlaHorario"></h4>
-        <h5 class="modal-title colort-2 montserrat-bold text-center" id="charlaTema">""</h5>
-		<h6 class="colort-2 montserrat text-center" id="charlaExpositor"></h6>
-        <hr style="border-top:1px solid var(--color-principal);">
-		<h6 class="colort-2 montserrat text-center" id="charlaDescripcion"></h6>
-        <div class="text-center">
+		<div class="row justify-content-center">
+			<div class="col-lg-3 col-md-3 col-11">
+				<div class="w-100 text-center" style="display: flex; justify-content: center; align-items: center;">
+					<div style="height: 140px; width: 140px; border-radius: 100%; text-align: center;">
+						<img src="<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/ico-estudiantes.png" class="w-100">
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-7 col-md-7 col-11">
+				<h4 class="modal-title colort-2 arialmt-b text-center" id="charlaHorario">
+				ESTUDIANTE DESTACADO
+				</h4>
+				<h5 class="modal-title colort-1 montserrat-bold text-center">ADMINISTRACIÓN DE EMPRESAS</h5>
+				<h5 class="modal-title colort-2 arialmt-b text-center">
+				LA PAZ
+				</h5>
+			</div>
+		</div>
+		<br>
+		<div class="row justify-content-center">
+			<div class="col-lg-3 col-md-3 col-11">
+				<h6 class="colort-2 text-end montserrat-bold">
+					Datos de Contacto:
+				</h6>
+			</div>
+			<div class="col-lg-7">
+				<h6 class="colort-2 text-start montserrat-regular">
+					Juan Pablo Peréz Rocha
+				</h6>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-lg-3 col-md-3 col-11">
+				<h6 class="colort-2 text-end montserrat-bold">
+					Profesión:
+				</h6>
+			</div>
+			<div class="col-lg-7">
+				<h6 class="colort-2 text-start montserrat-regular">
+					
+				</h6>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-lg-3 col-md-3 col-11">
+				<h6 class="colort-2 text-end montserrat-bold">
+					Edad:
+				</h6>
+			</div>
+			<div class="col-lg-7">
+				<h6 class="colort-2 text-start montserrat-regular">
+					
+				</h6>
+			</div>
+		</div>
+		<br>
+        <div class="text-center m-0 p-0 b-0">
         <input type="hidden" name="charlaId" id="charlaId">
-        <button type="button" class="btn btn-primary montserrat-bold text-white" style="background-color:var(--color-principal-2);border-radius:30px;font-size:14px;" onclick="registrar_charla()">REGISTRARME
+        <button type="button" class="btn btn-primary montserrat-bold text-white" style="background-color:var(--color-principal);border-radius:30px;font-size:14px;" onclick="">DESCARGAR CV
 		</button>
 		</div>
       </div>
@@ -94,7 +144,7 @@
 			<p class="colort-2"><?php echo $d['datos_contacto']; ?></p>
 			<p class="colort-1">Administración de Empresas</p>
 			<p class="colort-1"><?php echo $d['sede_u']; ?></p>
-			<svg class="ver-cro" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+			<svg data-toggle="modal" data-target="#exampleModalCenter" class="ver-cro" data-charla="1" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
 				<!-- Círculo con fondo naranja -->
 				<circle cx="25" cy="25" r="20" fill="var(--color-principal)" />
 				<!-- Icono de "+" -->
