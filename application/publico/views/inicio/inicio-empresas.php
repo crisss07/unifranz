@@ -110,26 +110,7 @@
 	</div>    
 	</div> 	
 	<div class="row justify-content-center m-0 b-0 montserrat-medium d-flex align-items-center f-buscar" style="padding-top:30px;padding-bottom:30px;">        
-        <div class="col-lg-3 col-md-3">&nbsp;</div>
-        <div class="col-lg-3 col-md-3 col-11 text-start text-white">
-		<h6>SEDE UNIFRANZ</h6>
-		<select class="combo-blanco">
-			<option value="1">La Paz</option>
-			<option value="2">El Alto</option>
-		</select>
-		</div>
-		<div class="col-lg-3 col-md-3 col-11 text-start text-white">
-		<h6 class="">CARRERA</h6>
-		<select class="combo-blanco">
-			<?php foreach ($carreras as $c): ?>	
-			<option name="carrera_u" value="<?php echo $c['id']; ?>"><?php echo $c['carrera']; ?></option>
-			<?php endforeach; ?>
-		</select>
-		</div>
-		 <div class="col-lg-3 col-md-3">&nbsp;</div>
-		<div class="col-lg-6 col-md-6 col-11 m-0 text-center text-white">
-		<button type="submit" class="text-white btn-buscar" style="">BUSCAR TALENTO</button>
-		</div>
+     
     </div>
 	<div class="row justify-content-center m-0 b-0 montserrat-bold d-flex align-items-center f-estudiantes" style="padding-top:30px;padding-bottom:10%;line-height:16px;">   
 		<?php foreach ($destacados as $d): ?>	
@@ -144,13 +125,7 @@
 			<p class="colort-2"><?php echo $d['datos_contacto']; ?></p>
 			<p class="colort-1">Administración de Empresas</p>
 			<p class="colort-1"><?php echo $d['sede_u']; ?></p>
-			<svg data-toggle="modal" data-target="#exampleModalCenter" class="ver-cro" data-charla="1" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
-				<!-- Círculo con fondo naranja -->
-				<circle cx="25" cy="25" r="20" fill="var(--color-principal)" />
-				<!-- Icono de "+" -->
-				<text x="17" y="37" font-family="Arial" font-size="30" fill="white">+</text>
-			</svg><br><br>
-			<p class="colort-1">MÁS INFORMACIÓN</p>
+			
 		</div>
 		<?php endforeach; ?>
 		</div>
@@ -174,7 +149,7 @@
 	
     }
 .f-buscar{
-	height:340px; 
+	height:30px; 
 	background-image: url('<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/ie-buscar.png'); /* Ruta de la imagen de fondo */
     background-size: cover; /* Ajustar la imagen al tamaño del contenedor */
     background-position: center; /* Posición de la imagen en el contenedor */
@@ -215,13 +190,13 @@ $('#myModal').on('hidden.bs.modal', function (e) {
 })
 </script>
 <script>
-    function actualizarModal(charlaIndex) {
-        var charla = <?php echo json_encode($charlas); ?>[charlaIndex];
+    function actualizarModal(desIndex) {
+        var charla = <?php echo json_encode($destacados); ?>[desIndex];
         if(charla.id!=0){
-        document.getElementById('charlaId').value = charla.id;
+        document.getElementById('des_Id').value = charla.id;
         }
-        document.getElementById('charlaHorario').innerText = charla.horario;
-        document.getElementById('charlaTema').innerText = charla.tema;
+        document.getElementById('des_Horario').innerText = charla.horario;
+        document.getElementById('des_Tema').innerText = charla.tema;
         document.getElementById('charlaExpositor').innerText = charla.expositor;
         document.getElementById('charlaDescripcion').innerText = charla.descripcion;
     }
@@ -229,38 +204,9 @@ $('#myModal').on('hidden.bs.modal', function (e) {
     var buttons = document.querySelectorAll('[data-toggle="modal"]');
     buttons.forEach(function(button) {
         button.addEventListener('click', function() {
-            var charlaIndex = this.getAttribute('data-charla');
-            actualizarModal(charlaIndex-1);
+            var desIndex = this.getAttribute('data-charla');
+            actualizarModal(desIndex-1);
         });
     });
     
-    function registrar_charla() {
-		var charla_id = document.getElementById('charlaId').value;
-		var enlace  = '<?php echo $this->tool_entidad->sitioindex(); ?>';
-		$.ajax({
-	        url: enlace+'Inicio/ajax_registrarCharla',
-	        type: 'POST',
-	        dataType: 'json',
-	        data: { charla_id: charla_id },
-	        success: function(data) {
-	            if(data.error){
-	            	Swal.fire({
-	                    title: "Error!",
-	                    text: data.message,
-	                    icon: "error",
-	                    confirmButtonColor: '#3085d6',
-	                    confirmButtonText: 'Ok'
-	                });
-	            } else {
-	                Swal.fire({
-	                    title: "Correcto!",
-	                    text: data.message,
-	                    icon: "success",
-	                    confirmButtonColor: '#3085d6',
-	                    confirmButtonText: 'Ok'
-	                });
-	            }
-	        }
-	    });
-	}
 </script>
