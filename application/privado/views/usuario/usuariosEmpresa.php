@@ -21,6 +21,7 @@
                                         <th>Tipo de Empresa</th>
                                         <th>Teléfono</th>
                                         <th>Dirección</th>
+                                        <th>Usuario</th>
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
@@ -34,6 +35,7 @@
                                         <td><?php echo $value->tipo_empresa; ?></td>
                                         <td><?php echo $value->telefono; ?></td>
                                         <td><?php echo $value->direccion; ?></td>
+                                        <td><?php echo $value->usuario; ?></td>
                                         <td><?php echo $value->estado; ?></td>
                                     </tr>
                                     <?php endforeach ?>
