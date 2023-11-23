@@ -43,195 +43,102 @@
 	</div>
 	<div class="row justify-content-center" style="margin:-50px 0 0 0;">    
 	<div class="col-lg-12 col-md-12 col-12 text-center arialmt-b">
-		<h1 class="colort-2">CRONOGRAMA</h1>
-		<br>    
+		<h1 class="colort-2">TALENTO UNIFRANZ</h1>
+		<h2 class="colort-1">LA PAZ <b class="colort-2">|</b>  EL ALTO <b class="colort-2">|</b> SANTA CRUZ <b class="colort-2">|</b> COCHABAMBA</h2>		
 	</div>    
 	</div>  
 	<div class="row justify-content-center m-0 b-0 d-flex align-items-center p-2" style="padding-top:60px;padding-bottom:60px;" data-aos="fade-up"
      data-aos-anchor-placement="center-bottom">    
-	<div class="col-lg-9 col-md-9 col-11 text-center montserrat">
-		<h4 class="colort-1">¡Prepárate para descubrir oportunidades, ampliar tu red y dar el siguiente paso en tu carrera profesional en la <b>Feria de Empleabilidad UNIFRANZ 2023</b>!</h4>
+	<div class="col-lg-7 col-md-7 col-11 text-center montserrat">
+	<br>
+		<h5 class="colort-1">¡Presentamos a nuestros alumnos con desempeño destacado en las diferentes carreras de las diferentes sedes de la <b>UNIFRANZ</b>!</h5>
+		<h6 class="colort-4">
+		Ellos se encuentran preparados y con altas experiencias de unirse y crecer
 		<br>
-		<h5 class="colort-4">Escucha a expertos de la industria compartiendo sus experiencias y consejos<br>
-		<b>Registra tu participación en las Charlas de tu interés
-		</b><br><br>
-		</h5>
+		<b>en el ambiente laboral de su Empresa o Institución</b><br><br>
+		</h6>
 	</div>    
-	</div>    
+	</div> 	
+	<div class="row justify-content-center m-0 b-0 montserrat-regular d-flex align-items-center f-buscar" style="padding-top:30px;padding-bottom:30px;">        
+        <div class="col-lg-3 col-md-3">&nbsp;</div>
+        <div class="col-lg-3 col-md-3 col-11 text-center text-white">
+		<h6 class="">SEDE UNIFRANZ</h6>
+		<select class="combo-blanco">
+			<option value="la-paz">La Paz</option>
+			<option value="el-alto">El Alto</option>
+			<option value="santa-cruz">Santa Cruz</option>
+		</select>
+		</div>
+		<div class="col-lg-3 col-md-3 col-11 text-center text-white">
+		<h6 class="">CARRERA</h6>
+		<select class="combo-blanco">
+			<option value="la-paz">Administración de Empresas</option>
+			<option value="el-alto">Derecho</option>
+		</select>
+		</div>
+		 <div class="col-lg-3 col-md-3">&nbsp;</div>
+		<div class="col-lg-6 col-md-6 col-11 m-0 text-center text-white">
+		<button type="submit">BUSCAR TALENTO</button>
+		</div>
+    </div>
+	<div class="row justify-content-center m-0 b-0 montserrat-bold d-flex align-items-center f-estudiantes" style="padding-top:30px;padding-bottom:30px;">        
+        <div class="col-lg-3 col-md-3 col-11 text-center text-white" style="background-color: rgba(255, 255, 255, 0.6); backdrop-filter: blur(5px); padding:10px 15px 10px 15px; border-radius:30px; margin:7px;">
+			<p class="colort-2">Juan Pablo Pérez Rocha</p>
+			<p class="colort-1">Administración de Empresas</p>
+			<p class="colort-1">LA PAZ</p>
+			<svg class="ver-cro" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+			<!-- Círculo con fondo naranja -->
+			<circle cx="25" cy="25" r="20" fill="var(--color-principal)" />
+			<!-- Icono de "+" -->
+			<text x="17" y="37" font-family="Arial" font-size="30" fill="white">+</text>
+			</svg>
+			<p class="colort-1">MÁS INFORMACIÓN</p>
+		</div>
+		<div class="col-lg-3 col-md-3 col-11 text-center text-white" style="background-color: rgba(255, 255, 255, 0.6); backdrop-filter: blur(5px); padding:10px 15px 10px 15px; border-radius:30px; margin:7px;">
+			<p class="colort-2">Juan Pablo Pérez Rocha</p>
+			<p class="colort-1">Administración de Empresas</p>
+			<p class="colort-1">LA PAZ</p>
+			<svg class="ver-cro" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+			<!-- Círculo con fondo naranja -->
+			<circle cx="25" cy="25" r="20" fill="var(--color-principal)" />
+			<!-- Icono de "+" -->
+			<text x="17" y="37" font-family="Arial" font-size="30" fill="white">+</text>
+			</svg>
+			<p class="colort-1">MÁS INFORMACIÓN</p>
+		</div>
+		<div class="col-lg-3 col-md-3 col-11 text-center text-white" style="background-color: rgba(255, 255, 255, 0.6); backdrop-filter: blur(5px); padding:10px 15px 10px 15px; border-radius:30px; margin:7px;">
+			<p class="colort-2">Juan Pablo Pérez Rocha</p>
+			<p class="colort-1">Administración de Empresas</p>
+			<p class="colort-1">LA PAZ</p>
+			<svg class="ver-cro" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+			<!-- Círculo con fondo naranja -->
+			<circle cx="25" cy="25" r="20" fill="var(--color-principal)" />
+			<!-- Icono de "+" -->
+			<text x="17" y="37" font-family="Arial" font-size="30" fill="white">+</text>
+			</svg>
+			<p class="colort-1">MÁS INFORMACIÓN</p>
+		</div>
+		<div class="col-lg-3 col-md-3 col-11 text-center text-white" style="background-color: rgba(255, 255, 255, 0.6); backdrop-filter: blur(5px); padding:10px 15px 10px 15px; border-radius:30px; margin:7px;">
+			<p class="colort-2">Juan Pablo Pérez Rocha</p>
+			<p class="colort-1">Administración de Empresas</p>
+			<p class="colort-1">LA PAZ</p>
+			<svg class="ver-cro" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+			<!-- Círculo con fondo naranja -->
+			<circle cx="25" cy="25" r="20" fill="var(--color-principal)" />
+			<!-- Icono de "+" -->
+			<text x="17" y="37" font-family="Arial" font-size="30" fill="white">+</text>
+			</svg>
+			<p class="colort-1">MÁS INFORMACIÓN</p>
+		</div>
+    </div>
 	</div> 
-	<div class="container-fluid m-0 p-0" style="background-color:#f3f3f3;">	
-	<div class="row justify-content-center m-0 b-0 montserrat-regular d-flex align-items-center p-2" style="padding-top:60px;padding-bottom:60px;">        
-        <div class="col-lg-6 col-md-6 col-12 text-center">
-			<div class="row justify-content-center m-0 b-0 montserrat-regular d-flex align-items-center" >   
-				<br><br>			
-				<div class="col-lg-12 col-md-12 col-11 bg-white" style="border-radius:30px 30px 0 0;">
-				<br>
-					<div class="text-center arialmt-b colort-2">
-						<h2 class="colort-1" style="line-height:20px;">PROGRAMA</h2>
-						<h2>LA PAZ <span class="colort-1">|</span> EL ALTO</h2>
-					</div>
-					<div>
-						<h5 class="colort-1 montserrat-bold">Viernes 24 de Noviembre</h5>
-						
-						<br>
-						
-						<!---
-						<div class="row justify-content-center m-0 b-0 montserrat-medium" style="text-align:left; line-height:16px;padding-left:10px;">
-							<div class="col-lg-3 col-md-3 col-12">
-							<p class="colort-4">
-							08:00
-							</p>
-							</div>
-							<div class="col-lg-1 col-md-1 col-1" style="border-left:1px solid var(--color-principal-4);">
-							</div>
-							<div class="col-lg-6 col-md-6 col-7">
-								<p class="colort-1">AMBIENTACIÓN STANDS</p>
-								<p class="colort-4">
-								Armado de Stands Expositores
-								</p>
-							</div>
-							<div class="col-lg-2 col-md-2 col-3">
-							</div>
-						</div>
-						<br>
-						
-						<div class="row justify-content-center m-0 b-0 montserrat-medium" style="text-align:left; line-height:16px;padding-left:10px;">
-							<div class="col-lg-3 col-md-3 col-12">
-							<p class="colort-4">
-							10:00
-							</p>
-							</div>
-							<div class="col-lg-1 col-md-1 col-1" style="border-left:1px solid var(--color-principal-4);">
-							</div>
-							<div class="col-lg-6 col-md-6 col-7" style="text-align:left; line-height:16px;">
-								<p class="colort-1">RECEPCIÓN Y BIENBENIDA</p>
-								<p class="colort-4">
-								Recibimiento Participantes e Invitados
-								</p>
-							</div>
-							<div class="col-lg-2 col-md-2 col-3">
-							</div>
-						</div><br>
-						----->
-						
-						<div class="row justify-content-center m-0 b-0 montserrat-medium" style="text-align:left; line-height:16px;padding-left:10px;">
-							<div class="col-lg-3 col-md-3 col-12">
-							<p class="colort-4">
-							10:30
-							</p>
-							</div>
-							<div class="col-lg-1 col-md-1 col-1" style="border-left:1px solid var(--color-principal-4);">
-							</div>
-							<div class="col-lg-7 col-md-7 col-8" style="text-align:left; line-height:16px;">
-								<p class="colort-1">INAUGURACIÓN</p>
-								<p class="colort-4">
-									Palabras de Bienvenida a cargo de:<br><br>
-									<b>Pedro Sáenz Muñoz PhD.c</b><br>
-									Vicerrector Sede La Paz<br><br>
-									<b>Lic. Eve Gomez Ferrufino</b><br>
-									Vicerrectora Sede El Alto<br><br>
-									<b>Lic. Ninoska Peñaloza Monzón</b><br>
-									Directora Nacional de Servicios Estudiantiles<br><br>
-									<b>Diego Suárez</b><br>
-									Jefe de Experimentación - Laboratorio de Aceleración
-									PNUD<br><br>
-									<b>Ing. Jaime Ascarrunz</b><br>
-									Presidente CNC<br><br>
-									<b>Lic. Pablo Camacho</b><br>
-									Presidente CNI<br><br>
-									Autoridades e Invitados Especiales</b><br>
-								</p>
-							</div>
-							<div class="col-lg-1 col-md-1 col-1">
-							</div>
-						</div>
-						<?php foreach ($charlas as $charla): ?>
-						<br>
-						<div class="row justify-content-center m-0 b-0 montserrat-medium" style="text-align:left; line-height:16px;padding-left:10px;">
-							<div class="col-lg-3 col-md-3 col-12">
-							<p class="colort-4">
-							<?php echo $charla['horario']; ?>
-							</p>
-							</div>
-							<div class="col-lg-1 col-md-1 col-1" style="border-left:1px solid var(--color-principal-4);">
-							</div>
-							<div class="col-lg-6 col-md-6 col-7" style="text-align:left; line-height:16px;">
-								<b class="colort-1">
-								<?php echo $charla['tema']; ?>
-								</b>
-								<p class="colort-4">
-								<?php echo $charla['expositor']; ?>
-								</p>
-							</div>
-							<div class="col-lg-2 col-md-2 col-3">
-								<svg data-toggle="modal" data-target="#exampleModalCenter" class="ver-cro" data-charla="<?php echo $charla['id']; ?>" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
-								  <!-- Círculo con fondo naranja -->
-								  <circle cx="25" cy="25" r="20" fill="var(--color-principal)" />
-
-								  <!-- Icono de "+" -->
-								  <text x="17" y="37" font-family="Arial" font-size="30" fill="white">+</text>
-								</svg>
-							</div>
-						</div>
-						<?php endforeach; ?>
-						<br>
-					</div>
-				</div>
-				<br><br>
-				<div class="col-lg-12 col-md-12 col-11 fondo-c1" style="border-radius:0 0 30px 30px;">
-					<br>
-					<br>
-				</div>
-			</div>
-		</div>
+	
     </div>
 	
-	<br>
-	<br>
-    </div>
 	
-	<br>
-	<br>
-<div class="row justify-content-center m-0 b-0 montserrat-regular d-flex align-items-center bg-white"> 
-        <div class="col-lg-5 col-md-5 col-11 text-center colort-2 arialmt-b" data-aos="zoom-in">
-			<div class="d-block d-lg-none d-md-none" style="hight:40px;">&nbsp;</div>
-			<p class="bd"><b>EN LA FERIA</b></p>
-            <p class="bd"><b>PARTICIPAN</b></p>
-            <p class="bd-numero colort-1"><b>+60</b></p>
-            <p class="bd"><b>EMPRESAS</b></p>
-			<div class="d-block d-lg-none d-md-none" style="hight:40px;">&nbsp;</div>
-		</div>
-        <div class="col-lg-5 col-md-5 col-12 text-center p-lg-5 p-4">
-			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<img src="<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/logos_pantalla01.png" class="d-block w-100" alt="Primera Imagen">
-					</div>
-					<div class="carousel-item">
-						<img src="<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/logos_pantalla02.png" class="d-block w-100" alt="Segunda Imagen">
-					</div>
-					<div class="carousel-item">
-						<img src="<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/logos_pantalla03.png" class="d-block w-100" alt="Tercera Imagen">
-					</div>
-					<div class="carousel-item">
-						<img src="<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/logos_pantalla04.png" class="d-block w-100" alt="Cuarta Imagen">
-					</div>
-				</div>
-				
-			<div style="margin-top:50px;position:relative;">
-				<ol class="carousel-indicators">
-					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-					<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-				</ol>
-			</div>
-			</div>
-		</div>
-	</div>
 <style>
-.ver-cro{
-	
+.rojo{
+	border:2px solid red;
 }
 .ver-cro:hover{
 	cursor: pointer;
@@ -244,6 +151,21 @@
 	border-radius:30px;
 	
     }
+.f-buscar{
+	height:340px; 
+	background-image: url('<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/ie-buscar.png'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajustar la imagen al tamaño del contenedor */
+    background-position: center; /* Posición de la imagen en el contenedor */
+}
+.f-estudiantes{
+	height:auto; 
+	padding-top:50px;
+	padding-bottom:50px;
+	background-image: url('<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/ie-fondoe.png'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajustar la imagen al tamaño del contenedor */
+    background-position: center; /* Posición de la imagen en el contenedor */
+	background-attachment: fixed;
+}
 </style>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
