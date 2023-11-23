@@ -81,56 +81,47 @@
 		<button type="submit">BUSCAR TALENTO</button>
 		</div>
     </div>
-	<div class="row justify-content-center m-0 b-0 montserrat-bold d-flex align-items-center f-estudiantes" style="padding-top:30px;padding-bottom:30px;">        
+	<div class="row justify-content-center m-0 b-0 montserrat-bold d-flex align-items-center f-estudiantes" style="padding-top:30px;padding-bottom:30px;line-height:12px;">        
         <div class="col-lg-3 col-md-3 col-11 text-center text-white" style="background-color: rgba(255, 255, 255, 0.6); backdrop-filter: blur(5px); padding:10px 15px 10px 15px; border-radius:30px; margin:7px;">
+			<br>
+			<div class="w-100 text-center" style="display: flex; justify-content: center; align-items: center;">
+				<div style="height: 140px; width: 140px; border-radius: 100%; text-align: center;">
+					<img src="<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/ico-estudiantes.png" class="w-100">
+				</div>
+			</div>
+			<br>
 			<p class="colort-2">Juan Pablo Pérez Rocha</p>
 			<p class="colort-1">Administración de Empresas</p>
 			<p class="colort-1">LA PAZ</p>
 			<svg class="ver-cro" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
-			<!-- Círculo con fondo naranja -->
-			<circle cx="25" cy="25" r="20" fill="var(--color-principal)" />
-			<!-- Icono de "+" -->
-			<text x="17" y="37" font-family="Arial" font-size="30" fill="white">+</text>
-			</svg>
+				<!-- Círculo con fondo naranja -->
+				<circle cx="25" cy="25" r="20" fill="var(--color-principal)" />
+				<!-- Icono de "+" -->
+				<text x="17" y="37" font-family="Arial" font-size="30" fill="white">+</text>
+			</svg><br><br>
 			<p class="colort-1">MÁS INFORMACIÓN</p>
 		</div>
-		<div class="col-lg-3 col-md-3 col-11 text-center text-white" style="background-color: rgba(255, 255, 255, 0.6); backdrop-filter: blur(5px); padding:10px 15px 10px 15px; border-radius:30px; margin:7px;">
+        <div class="col-lg-3 col-md-3 col-11 text-center text-white" style="background-color: rgba(255, 255, 255, 0.6); backdrop-filter: blur(5px); padding:10px 15px 10px 15px; border-radius:30px; margin:7px;">
+			<br>
+			<div class="w-100 text-center" style="display: flex; justify-content: center; align-items: center;">
+				<div style="height: 140px; width: 140px; border-radius: 100%; text-align: center;">
+					<img src="<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/ico-estudiantes.png" class="w-100">
+				</div>
+			</div>
+			<br>
 			<p class="colort-2">Juan Pablo Pérez Rocha</p>
 			<p class="colort-1">Administración de Empresas</p>
 			<p class="colort-1">LA PAZ</p>
 			<svg class="ver-cro" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
-			<!-- Círculo con fondo naranja -->
-			<circle cx="25" cy="25" r="20" fill="var(--color-principal)" />
-			<!-- Icono de "+" -->
-			<text x="17" y="37" font-family="Arial" font-size="30" fill="white">+</text>
-			</svg>
+				<!-- Círculo con fondo naranja -->
+				<circle cx="25" cy="25" r="20" fill="var(--color-principal)" />
+				<!-- Icono de "+" -->
+				<text x="17" y="37" font-family="Arial" font-size="30" fill="white">+</text>
+			</svg><br><br>
 			<p class="colort-1">MÁS INFORMACIÓN</p>
 		</div>
-		<div class="col-lg-3 col-md-3 col-11 text-center text-white" style="background-color: rgba(255, 255, 255, 0.6); backdrop-filter: blur(5px); padding:10px 15px 10px 15px; border-radius:30px; margin:7px;">
-			<p class="colort-2">Juan Pablo Pérez Rocha</p>
-			<p class="colort-1">Administración de Empresas</p>
-			<p class="colort-1">LA PAZ</p>
-			<svg class="ver-cro" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
-			<!-- Círculo con fondo naranja -->
-			<circle cx="25" cy="25" r="20" fill="var(--color-principal)" />
-			<!-- Icono de "+" -->
-			<text x="17" y="37" font-family="Arial" font-size="30" fill="white">+</text>
-			</svg>
-			<p class="colort-1">MÁS INFORMACIÓN</p>
+
 		</div>
-		<div class="col-lg-3 col-md-3 col-11 text-center text-white" style="background-color: rgba(255, 255, 255, 0.6); backdrop-filter: blur(5px); padding:10px 15px 10px 15px; border-radius:30px; margin:7px;">
-			<p class="colort-2">Juan Pablo Pérez Rocha</p>
-			<p class="colort-1">Administración de Empresas</p>
-			<p class="colort-1">LA PAZ</p>
-			<svg class="ver-cro" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
-			<!-- Círculo con fondo naranja -->
-			<circle cx="25" cy="25" r="20" fill="var(--color-principal)" />
-			<!-- Icono de "+" -->
-			<text x="17" y="37" font-family="Arial" font-size="30" fill="white">+</text>
-			</svg>
-			<p class="colort-1">MÁS INFORMACIÓN</p>
-		</div>
-    </div>
 	</div> 
 	
     </div>

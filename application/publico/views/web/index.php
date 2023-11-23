@@ -166,6 +166,9 @@
 					<div class="carousel-item">
 						<img src="<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/logos_pantalla04.png" class="d-block w-100" alt="Cuarta Imagen">
 					</div>
+					<div class="carousel-item">
+						<img src="<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/logos_pantalla05.png" class="d-block w-100" alt="Quinta Imagen">
+					</div>
 				</div>
 				
 			<div style="margin-top:50px;position:relative;">
@@ -174,6 +177,7 @@
 					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 					<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
 				</ol>
 			</div>
 			</div>
