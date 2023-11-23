@@ -76,9 +76,9 @@
                         <!-- Logo text -->
                         <span>
                          <!-- dark Logo text -->
-                         <img src="<?php echo $this->tool_entidad->sitio(); ?>files/public/assets/images/logo_letra.png" alt="homepage" class="dark-logo" height="60px" />
+                         <img src="<?php echo $this->tool_entidad->sitio(); ?>files/public/assets/images/Logo-Red-Alumni.png" alt="homepage" class="dark-logo" height="60px" />
                          <!-- Light Logo text -->    
-                         <img src="<?php echo $this->tool_entidad->sitio(); ?>files/public/assets/images/logo_letra.png" class="light-logo" alt="homepage" /></span> </a>
+                         <img src="<?php echo $this->tool_entidad->sitio(); ?>files/public/assets/images/Logo-Red-Alumni.png" class="light-logo" alt="homepage" /></span> </a>
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Logo -->
@@ -161,15 +161,15 @@
                             <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Usuarios</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="<?php echo $this->tool_entidad->sitioadmin().'UsuariosAlumni'; ?>">Alumni</a></li>
-                                <li><a href="#">Empresas</a></li>
-                                <li><a href="#">Administradores</a></li>
+                                <li><a href="<?php echo $this->tool_entidad->sitioadmin().'UsuariosEmpresa'; ?>">Empresas</a></li>
+                                <li><a href="<?php echo $this->tool_entidad->sitioadmin().'UsuariosAdministradores'; ?>">Administradores</a></li>
                             </ul>
                         </li>
                         <!-- <li>
                             <a href="<?php echo $this->tool_entidad->sitioadmin().'UsuariosAlumni'; ?>"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Usuarios</span></a>
                         </li> -->
                         <li>
-                            <a href="#"><i class="mdi mdi-account-card-details"></i><span class="hide-menu">Alumnos Destacados</span></a>
+                            <a href="<?php echo $this->tool_entidad->sitioadmin().'AlumnosDestacados'; ?>"><i class="mdi mdi-account-card-details"></i><span class="hide-menu">Alumnos Destacados</span></a>
                         </li>
                       <!--   <li>
                             <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Inbox</span></a>

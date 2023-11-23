@@ -36,13 +36,13 @@ File: scss
 /*Top bar
 *******************/
 .topbar {
-  background: #F26522;
+  background: #fa501e;
   /* Old browsers */
-  background: -moz-linear-gradient(left, #da5b1f 0%, #F26522 100%);
+  background: -moz-linear-gradient(left, #da5b1f 0%, #fa501e 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #da5b1f 0%, #F26522 100%);
+  background: -webkit-linear-gradient(left, #da5b1f 0%, #fa501e 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #da5b1f 0%, #F26522 100%);
+  background: linear-gradient(to right, #da5b1f 0%, #fa501e 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
@@ -77,11 +77,11 @@ File: scss
 /*General Elements
 *******************/
 a.link:hover, a.link:focus {
-  color: #F26522 !important;
+  color: #fa501e !important;
 }
 
 .bg-theme {
-  background-color: #F26522 !important;
+  background-color: #fa501e !important;
 }
 
 .pagination > .active > a,
@@ -90,31 +90,31 @@ a.link:hover, a.link:focus {
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-  background-color: #F26522;
-  border-color: #F26522;
+  background-color: #fa501e;
+  border-color: #fa501e;
 }
 
 .right-sidebar .rpanel-title {
-  background: #F26522;
+  background: #fa501e;
 }
 
 .stylish-table tbody tr:hover, .stylish-table tbody tr.active {
-  border-left: 4px solid #F26522;
+  border-left: 4px solid #fa501e;
 }
 
 .text-themecolor {
-  color: #F26522 !important;
+  color: #fa501e !important;
 }
 
 .profile-tab li a.nav-link.active,
 .customtab li a.nav-link.active {
-  border-bottom: 2px solid #F26522;
-  color: #F26522;
+  border-bottom: 2px solid #fa501e;
+  color: #fa501e;
 }
 
 .profile-tab li a.nav-link:hover,
 .customtab li a.nav-link:hover {
-  color: #F26522;
+  color: #fa501e;
 }
 
 /*******************
@@ -122,16 +122,16 @@ a.link:hover, a.link:focus {
 *******************/
 .btn-themecolor,
 .btn-themecolor.disabled {
-  background: #F26522;
+  background: #fa501e;
   color: #ffffff;
-  border: 1px solid #F26522;
+  border: 1px solid #fa501e;
 }
 
 .btn-themecolor:hover,
 .btn-themecolor.disabled:hover {
-  background: #F26522;
+  background: #fa501e;
   opacity: 0.7;
-  border: 1px solid #F26522;
+  border: 1px solid #fa501e;
 }
 
 .btn-themecolor.active, .btn-themecolor:focus,
@@ -152,7 +152,7 @@ a.link:hover, a.link:focus {
 }
 
 .sidebar-nav ul li a.active, .sidebar-nav ul li a:hover {
-  color: #F26522;
+  color: #fa501e;
 }
 
 .sidebar-nav ul li a.active {
@@ -164,12 +164,12 @@ a.link:hover, a.link:focus {
 }
 
 .sidebar-nav > ul > li.active > a {
-  border-left: 3px solid #F26522;
-  color: #F26522;
+  border-left: 3px solid #fa501e;
+  color: #fa501e;
 }
 
 .sidebar-nav > ul > li.active > a i {
-  color: #F26522;
+  color: #fa501e;
 }
 
 .sidebar-nav > ul > li > a {
@@ -177,11 +177,11 @@ a.link:hover, a.link:focus {
 }
 
 .sidebar-nav > ul > li > a.active, .sidebar-nav > ul > li > a:hover {
-  border-left: 3px solid #F26522;
+  border-left: 3px solid #fa501e;
 }
 
 .sidebar-nav > ul > li > a.active i, .sidebar-nav > ul > li > a:hover i {
-  color: #F26522;
+  color: #fa501e;
 }
 
 .sidebar-nav > ul > li > a i {
@@ -191,5 +191,5 @@ a.link:hover, a.link:focus {
 .sidebar-nav > ul > li > a.active {
   font-weight: 400;
   background: #ffffff;
-  color: #F26522;
+  color: #fa501e;
 }
