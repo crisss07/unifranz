@@ -403,7 +403,7 @@
                       });
                     setTimeout(function () {
                         window.location.href = iniciaSesion;
-                    }, 5000); 
+                    }, 3000); 
                   }
               }
           });

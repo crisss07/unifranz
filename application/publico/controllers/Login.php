@@ -89,6 +89,7 @@ class Login extends CI_Controller {
             $registro = $this->RegistroModel->registrar($est_tit_id, $celular, $email, $contrasena);
             if ($registro['estado']) {
                 $_SESSION['alumni_id'] = $registro['registro_id'];
+                $_SESSION['rol_id'] = $registro['rol_id'];
                 $data = array('error' => false, 'tipo' => 'registrado', 'message' => 'Se registro correctamente');
             } else {
                 $data = array('error' => true, 'tipo' => 'no existe', 'message' => 'Error');

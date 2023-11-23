@@ -68,7 +68,7 @@ class RegistroModel extends CI_Model {
         $nuevoId = $this->db->insert_id();
 
         if ($nuevoId > 0) {
-            $respuesta = array('estado'=>true, 'registro_id'=>$nuevoId);
+            $respuesta = array('estado'=>true, 'registro_id'=>$nuevoId, 'rol_id'=>$resultado->rol_id);
             return $respuesta; // Registro válidas
         } else {
             $respuesta = array('estado'=>false);
