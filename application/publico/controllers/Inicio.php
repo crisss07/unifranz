@@ -9,6 +9,7 @@ class Inicio extends CI_Controller {
         $this->load->model('LoginModel');
         $this->load->model('LoginEmpresaModel');
         $this->load->model('ProgramasModel');
+        $this->load->model('DestacadosModel');
         $this->load->library('form_validation');
         session_start();
         if (!isset($_SESSION['alumni_id'])) {
@@ -53,7 +54,11 @@ class Inicio extends CI_Controller {
                     $_SESSION['nombres'] = $user->razon_social;
                     $_SESSION['rol'] = $user->rol;
                 }
-                $contenido['charlas'] = $this->ProgramasModel->getProgramas();
+                $dLP = $this->DestacadosModel->getDestacados(1);
+                $dSC = $this->DestacadosModel->getDestacados(2);
+				$destacados = array_merge($dLP , $dSC);
+				// print_r($this->reordenarD($destacados));exit();
+                $contenido['destacados'] = $this->reordenarD($destacados);
                 $data['contenido'] = $this->load->view('inicio/inicio-empresas', $contenido, true);
                 $this->load->view('plantilla/plantilla', $data);
             } else {
@@ -62,7 +67,10 @@ class Inicio extends CI_Controller {
             
         }
 	}
-	
+	function reordenarD($matriz) {
+		shuffle($matriz);
+		return $matriz;
+	}
 	public function ajax_registrarCharla() {
         $charla_id = $this->input->post('charla_id');
         $alumni_id = $_SESSION['alumni_id'];

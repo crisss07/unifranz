@@ -123,7 +123,7 @@
 							<div class="col-lg-1 col-md-1 col-1">
 							</div>
 						</div>
-						<?php foreach ($charlas as $charla): ?>
+						<?php foreach ($charlasLP as $charla): ?>
 						<br>
 						<div class="row justify-content-center m-0 b-0 montserrat-medium" style="text-align:left; line-height:16px;padding-left:10px;">
 							<div class="col-lg-3 col-md-3 col-12">
@@ -212,7 +212,7 @@
 							<div class="col-lg-1 col-md-1 col-1">
 							</div>
 						</div>
-						<?php foreach ($charlas as $charla): ?>
+						<?php foreach ($charlasSC as $charla): ?>
 						<br>
 						<div class="row justify-content-center m-0 b-0 montserrat-medium" style="text-align:left; line-height:16px;padding-left:10px;">
 							<div class="col-lg-3 col-md-3 col-12">
@@ -322,6 +322,10 @@ $('#myModal').on('hidden.bs.modal', function (e) {
   // do something...
 })
 </script>
+<?php 
+	$charlas = array_merge($charlasLP , $charlasSC);
+	// print_r($charlas);
+?>
 <script>
     function actualizarModal(charlaIndex) {
         var charla = <?php echo json_encode($charlas); ?>[charlaIndex];
