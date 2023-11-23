@@ -4,7 +4,7 @@
 	<div class="col-12">
         <div class="card wizard-content">
            	<div class="card">
-                <div class="card-header" style="background-color: #5c5c5c;">
+                <div class="card-header" style="background-color: #13064f;">
                     <h4 class="mb-0 text-white">Listado de Usuarios Empresa</h4>
                 </div>
             </div>
@@ -21,6 +21,7 @@
                                         <th>Tipo de Empresa</th>
                                         <th>Teléfono</th>
                                         <th>Dirección</th>
+                                        <th>Usuario</th>
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
@@ -34,6 +35,7 @@
                                         <td><?php echo $value->tipo_empresa; ?></td>
                                         <td><?php echo $value->telefono; ?></td>
                                         <td><?php echo $value->direccion; ?></td>
+                                        <td><?php echo $value->usuario; ?></td>
                                         <td><?php echo $value->estado; ?></td>
                                     </tr>
                                     <?php endforeach ?>
