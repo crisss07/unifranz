@@ -25,7 +25,11 @@
     <ul class="navbar-nav" data-aos="fade-right">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Hola <?php echo $_SESSION['nombres']; ?>
+        	<?php if ($_SESSION['rol_id'] != 3 ) : ?>
+        		Hola <?php echo $_SESSION['nombres']; ?>
+        	<?php else: ?>   
+        		Bienvenido <?php echo $_SESSION['nombres']; ?>
+        	<?php endif ?>          
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" style="color:var(--color-principal);" href="<?php echo $this->tool_entidad->sitioindex(); ?>Login/cerrarSesion">Cerrar sesión</a>
