@@ -80,7 +80,7 @@
 		</div>
 	</div>
 	<div class="contain fondo-c1">
-		<div class="row justify-content-center m-0 b-0 p-3 montserrat-medium d-flex align-items-center text-center" style="line-height:8px;">
+		<div class="row justify-content-center m-0 b-0 p-3 montserrat-medium d-flex align-items-center text-center" style="line-height:14px;">
     <div class="col-lg-3 col-md-3 col-11 m-3 p-0 colort-4" data-aos="flip-up" data-aos-duration="700">
         <h3 class="text-white"><b>LA PAZ / EL ALTO</b><br>
             <b>24 de noviembre</b></h3>
@@ -199,7 +199,7 @@
 	</div>
 	
 	<div class="row justify-content-center m-0 b-0 montserrat-regular p-2" style="padding-top:60px;padding-bottom:60px;">        
-        <div class="col-lg-5 col-md-5 col-12 text-center">
+        <div class="col-lg-5 col-md-5 col-12 text-center"><br>
 			<div class="row justify-content-center m-0 b-0 montserrat-regular d-flex align-items-center" >   
 				<br><br>			
 				<div class="col-lg-12 col-md-12 col-11 bg-white" style="border-radius:30px 30px 0 0;">
@@ -241,7 +241,7 @@
 				</div>
 			</div>
 		</div>
-        <div class="col-lg-5 col-md-5 col-12 text-center">
+        <div class="col-lg-5 col-md-5 col-12 text-center"><br>
 			<div class="row justify-content-center m-0 b-0 montserrat-regular d-flex align-items-center" >   
 				<br><br>			
 				<div class="col-lg-12 col-md-12 col-11 bg-white" style="border-radius:30px 30px 0 0;">

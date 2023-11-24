@@ -33,11 +33,11 @@
 	<div class="container-fluid m-0 p-0" style="background-color:#f3f3f3;" >
 	<div class="row justify-content-center m-0 p-2" data-aos="fade-up"
      data-aos-anchor-placement="center-bottom">    
-	<div class="col-lg-2 col-md-2 col-2" style="border-width: 2px 0 0 2px; border-style: solid; border-color: var(--color-principal); border-radius: 30px 0 0 0;">
+	<div class="col-lg-2 col-md-2 col-4" style="border-width: 2px 0 0 2px; border-style: solid; border-color: var(--color-principal); border-radius: 30px 0 0 0;">
 	<h1>&nbsp;</h1>
 	</div>   
-	<div class="col-lg-2 col-md-2 col-2"><h1>&nbsp;</h1></div>   
-	<div class="col-lg-2 col-md-2 col-2" style="border-width: 2px 2px 0 0; border-style: solid; border-color: var(--color-principal); border-radius: 0 30px 0 0;">
+	<div class="col-lg-2 col-md-2 col-4"><h1>&nbsp;</h1></div>   
+	<div class="col-lg-2 col-md-2 col-4" style="border-width: 2px 2px 0 0; border-style: solid; border-color: var(--color-principal); border-radius: 0 30px 0 0;">
 	<h1>&nbsp;</h1>
 	</div>      
 	</div>
@@ -61,7 +61,7 @@
 	</div> 
 	<div class="container-fluid m-0 p-0" style="background-color:#f3f3f3;">	
 	<div class="row justify-content-center m-0 b-0 montserrat-regular p-2" style="padding-top:60px;padding-bottom:60px;">        
-        <div class="col-lg-5 col-md-5 col-12 text-center">
+        <div class="col-lg-5 col-md-5 col-12 text-center"><br>
 			<div class="row justify-content-center m-0 b-0 montserrat-regular d-flex align-items-center" >   
 				<br><br>			
 				<div class="col-lg-12 col-md-12 col-11 bg-white" style="border-radius:30px 30px 0 0;">
@@ -162,7 +162,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-5 col-md-5 col-12 text-center">
+		<div class="col-lg-5 col-md-5 col-12 text-center"><br>
 			<div class="row justify-content-center m-0 b-0 montserrat-regular d-flex align-items-center" >   
 				<br><br>			
 				<div class="col-lg-12 col-md-12 col-11 bg-white" style="border-radius:30px 30px 0 0;">

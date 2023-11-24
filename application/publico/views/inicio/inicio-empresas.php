@@ -1,6 +1,6 @@
 <!-- fin login -->
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="modalDestacado" tabindex="-1" role="dialog" aria-labelledby="modalDestacadoTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -18,56 +18,20 @@
 				</div>
 			</div>
 			<div class="col-lg-7 col-md-7 col-11">
-				<h4 class="modal-title colort-2 arialmt-b text-center" id="charlaHorario">
-				ESTUDIANTE DESTACADO
-				</h4>
-				<h5 class="modal-title colort-1 montserrat-bold text-center">ADMINISTRACIÓN DE EMPRESAS</h5>
+				<h4 class="modal-title colort-2 montserrat-medium text-center" id="dNombre"></h4>
 				<h5 class="modal-title colort-2 arialmt-b text-center">
-				LA PAZ
+				ESTUDIANTE DESTACADO
 				</h5>
+				<h5 class="modal-title colort-1 montserrat-bold text-center" id="dCarrera"></h5>
+				<h5 class="modal-title colort-2 arialmt-b text-center" id="dSede"></h5>
 			</div>
 		</div>
 		<br>
-		<div class="row justify-content-center">
-			<div class="col-lg-3 col-md-3 col-11">
-				<h6 class="colort-2 text-end montserrat-bold">
-					Datos de Contacto:
-				</h6>
-			</div>
-			<div class="col-lg-7">
-				<h6 class="colort-2 text-start montserrat-regular">
-					Juan Pablo Peréz Rocha
-				</h6>
-			</div>
-		</div>
-		<div class="row justify-content-center">
-			<div class="col-lg-3 col-md-3 col-11">
-				<h6 class="colort-2 text-end montserrat-bold">
-					Profesión:
-				</h6>
-			</div>
-			<div class="col-lg-7">
-				<h6 class="colort-2 text-start montserrat-regular">
-					
-				</h6>
-			</div>
-		</div>
-		<div class="row justify-content-center">
-			<div class="col-lg-3 col-md-3 col-11">
-				<h6 class="colort-2 text-end montserrat-bold">
-					Edad:
-				</h6>
-			</div>
-			<div class="col-lg-7">
-				<h6 class="colort-2 text-start montserrat-regular">
-					
-				</h6>
-			</div>
-		</div>
 		<br>
         <div class="text-center m-0 p-0 b-0">
-        <input type="hidden" name="charlaId" id="charlaId">
-        <button type="button" class="btn btn-primary montserrat-bold text-white" style="background-color:var(--color-principal);border-radius:30px;font-size:14px;" onclick="">DESCARGAR CV
+        <input type="hidden" name="desId" id="desId">
+        <input type="hidden" id="dCV">
+        <button type="button" id="dBoton" class="btn btn-primary montserrat-bold text-white" style="background-color:var(--color-principal);border-radius:30px;font-size:14px;" onclick="descargarCV()">DESCARGAR CV
 		</button>
 		</div>
       </div>
@@ -83,11 +47,11 @@
 	<div class="container-fluid m-0 p-0" style="background-color:#f3f3f3;" >
 	<div class="row justify-content-center m-0 p-2" data-aos="fade-up"
      data-aos-anchor-placement="center-bottom">    
-	<div class="col-lg-2 col-md-2 col-2" style="border-width: 2px 0 0 2px; border-style: solid; border-color: var(--color-principal); border-radius: 30px 0 0 0;">
+	<div class="col-lg-2 col-md-2 col-4" style="border-width: 2px 0 0 2px; border-style: solid; border-color: var(--color-principal); border-radius: 30px 0 0 0;">
 	<h1>&nbsp;</h1>
 	</div>   
-	<div class="col-lg-2 col-md-2 col-2"><h1>&nbsp;</h1></div>   
-	<div class="col-lg-2 col-md-2 col-2" style="border-width: 2px 2px 0 0; border-style: solid; border-color: var(--color-principal); border-radius: 0 30px 0 0;">
+	<div class="col-lg-2 col-md-2 col-4"><h1>&nbsp;</h1></div>   
+	<div class="col-lg-2 col-md-2 col-4" style="border-width: 2px 2px 0 0; border-style: solid; border-color: var(--color-principal); border-radius: 0 30px 0 0;">
 	<h1>&nbsp;</h1>
 	</div>      
 	</div>
@@ -110,7 +74,7 @@
 	</div>    
 	</div> 	
 	<div class="row justify-content-center m-0 b-0 montserrat-medium d-flex align-items-center f-buscar" style="padding-top:30px;padding-bottom:30px;">        
-     
+      
     </div>
 	<div class="row justify-content-center m-0 b-0 montserrat-bold d-flex align-items-center f-estudiantes" style="padding-top:30px;padding-bottom:10%;line-height:16px;">   
 		<?php foreach ($destacados as $d): ?>	
@@ -123,9 +87,17 @@
 			</div>
 			<br>
 			<p class="colort-2"><?php echo $d['datos_contacto']; ?></p>
-			<p class="colort-1">Administración de Empresas</p>
+			<p class="colort-1"><?php echo $d['carrera_u']; ?></p>
 			<p class="colort-1"><?php echo $d['sede_u']; ?></p>
-			
+			<svg data-toggle="modal" data-target="#modalDestacado" class="ver-cro" data-charla="<?php echo $d['id']; ?>" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+								  <!-- Círculo con fondo naranja -->
+								  <circle cx="25" cy="25" r="20" fill="var(--color-principal)" />
+
+								  <!-- Icono de "+" -->
+								  <text x="17" y="37" font-family="Arial" font-size="30" fill="white">+</text>
+								</svg>
+			<br><br>
+			<p class="colort-1">MÁS INFORMACIÓN</p>
 		</div>
 		<?php endforeach; ?>
 		</div>
@@ -178,6 +150,9 @@
 	cursor:pointer;
     transition: transform 0.3s, background 0.3s;
 }
+#dBoton{
+	display:none;
+}
 </style>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
@@ -190,23 +165,38 @@ $('#myModal').on('hidden.bs.modal', function (e) {
 })
 </script>
 <script>
-    function actualizarModal(desIndex) {
-        var charla = <?php echo json_encode($destacados); ?>[desIndex];
-        if(charla.id!=0){
-        document.getElementById('des_Id').value = charla.id;
-        }
-        document.getElementById('des_Horario').innerText = charla.horario;
-        document.getElementById('des_Tema').innerText = charla.tema;
-        document.getElementById('charlaExpositor').innerText = charla.expositor;
-        document.getElementById('charlaDescripcion').innerText = charla.descripcion;
-    }
+function actualizarModal(desIndex) {
+    var des = <?php echo json_encode($destacados); ?>;
+    
+    des.forEach(function(d) {
+        if (d.id === desIndex) {
+            // alert("Valor encontrado: " + JSON.stringify(d));
+			document.getElementById('dNombre').innerText = d.datos_contacto;
+			document.getElementById('dCarrera').innerText = d.carrera_u;
+			document.getElementById('dSede').innerText = d.sede_u;
+			document.getElementById('desId').value = d.id;
+			if (d.adjunto_cv !== "" && d.adjunto_cv !== null) {
+				document.getElementById('dBoton').style.display = 'inline';
+				document.getElementById('dCV').value = d.adjunto_cv;
+			} else {
+				document.getElementById('dBoton').style.display = 'none';
+			}
+		}
+    });
+}
+
 
     var buttons = document.querySelectorAll('[data-toggle="modal"]');
     buttons.forEach(function(button) {
         button.addEventListener('click', function() {
             var desIndex = this.getAttribute('data-charla');
-            actualizarModal(desIndex-1);
+            actualizarModal(desIndex);
         });
     });
     
+function descargarCV() {
+		var CV = document.getElementById('dCV').value;
+        // Abre una nueva pestaña con el enlace proporcionado
+        window.open(CV, '_blank');
+    }
 </script>

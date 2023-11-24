@@ -4,9 +4,10 @@ class DestacadosModel extends CI_Model {
 
 
 		public function getDestacados($sede){
-			$this->db->select('des.*, se.sede as sede_u');
+			$this->db->select('des.*, se.sede as sede_u, ca.carrera as carrera_u');
 			$this->db->from('alumnos_destacados as des');
 			$this->db->join('sede as se', 'se.id=des.sede_id');
+			$this->db->join('carrera as ca', 'ca.id=des.carrera_id');
 			$this->db->where('des.sede_id', $sede);
 			$this->db->order_by('RAND()'); // Ordenar aleatoriamente
 			$this->db->limit(3); // Limitar a 6 registros
