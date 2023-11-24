@@ -32,7 +32,14 @@
                                         <td><?php echo $value->datos_contacto; ?></td>
                                         <td><?php echo $value->edad; ?></td>
                                         <td><?php echo $value->tipo; ?></td>
-                                        <td><a href="<?php echo $value->adjunto_cv; ?>" target="_blank">CV</a></td>
+                                        <td>
+                                        	<?php if (is_null($value->adjunto_cv)): ?>
+                                        		<?php echo ''; ?>	
+                                        	<?php else: ?>
+                                        		<a href="<?php echo $value->adjunto_cv; ?>" target="_blank">CV</a>
+                                        	<?php endif ?>
+                                        	
+                                        </td>
                                         <td style="font-size: 15px;"><a href="#" onclick="ver_mas('<?php echo $value->id; ?>','<?php echo $value->promedio; ?>','<?php echo $value->competencias; ?>','<?php echo $value->ocupacion_actual; ?>','<?php echo $value->descripcion_personal; ?>','<?php echo $value->ubicacion; ?>','<?php echo $value->sede; ?>','<?php echo $value->carrera; ?>')">+</a></td>
                                         <td><?php echo $value->estado; ?></td>
                                     </tr>
