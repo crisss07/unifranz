@@ -57,9 +57,12 @@ class Inicio extends CI_Controller {
                 $carreras = $this->DestacadosModel->getCarreras(1);
                 $dLP = $this->DestacadosModel->getDestacados(1);
                 $dSC = $this->DestacadosModel->getDestacados(2);
+                $dAll = $this->DestacadosModel->getDestacadosAll();
 				$destacados = array_merge($dLP , $dSC);
 				// print_r($this->reordenarD($destacados));exit();
+				 // print_r($dAll);exit();
                 $contenido['destacados'] = $this->reordenarD($destacados);
+                $contenido['destacadosAll'] = $dAll;
                 $contenido['carreras'] = $carreras;
                 $data['contenido'] = $this->load->view('inicio/inicio-empresas', $contenido, true);
                 $this->load->view('plantilla/plantilla', $data);

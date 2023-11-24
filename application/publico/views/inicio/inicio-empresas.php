@@ -74,11 +74,33 @@
 	</div>    
 	</div> 	
 	<div class="row justify-content-center m-0 b-0 montserrat-medium d-flex align-items-center f-buscar" style="padding-top:30px;padding-bottom:30px;">        
-      
-    </div>
-	<div class="row justify-content-center m-0 b-0 montserrat-bold d-flex align-items-center f-estudiantes" style="padding-top:30px;padding-bottom:10%;line-height:16px;">   
-		<?php foreach ($destacados as $d): ?>	
-        <div class="col-lg-3 col-md-3 col-11 text-center text-white" style="background-color: rgba(255, 255, 255, 0.6); backdrop-filter: blur(5px); padding:10px 15px 10px 15px; border-radius:30px; margin:7px;">
+        <div class="col-lg-3 col-md-3">&nbsp;</div>
+        <div class="col-lg-3 col-md-3 col-11 text-start text-white">
+		<h6>SEDE UNIFRANZ</h6>
+		<select name="sede" class="combo-blanco">
+			<option value="1">La Paz</option>
+			<option value="2">El Alto</option>
+		</select>
+		</div>
+		<div class="col-lg-3 col-md-3 col-11 text-start text-white">
+		<h6 class="">CARRERA</h6>
+		<select name="carrera_u" class="combo-blanco">
+			<?php foreach ($carreras as $c): ?>	
+			<option value="<?php echo $c['id']; ?>"><?php echo $c['carrera']; ?></option>
+			<?php endforeach; ?>
+		</select>
+		</div>
+		 <div class="col-lg-3 col-md-3">&nbsp;</div>
+		<div class="col-lg-6 col-md-6 col-11 m-0 text-center text-white">
+		<button type="submit" class="text-white btn-buscar" onclick="buscarDestacado()">BUSCAR TALENTO</button>
+		</div>
+    </div>  
+	<div id="alumni" style="margin-top:-120px;margin-bottom:120px;">
+	</div>
+	<div id="resultados" class="row justify-content-center m-0 b-0 montserrat-bold d-flex align-items-center f-estudiantes" style="padding-top:30px;padding-bottom:10%;line-height:16px;">
+		<?php foreach ($destacadosAll as $d): ?>	
+		<div class="col-lg-3 col-md-3 col-11 text-center text-white filtrado" data-talento-id="<?php echo $d['id']; ?>" style="background-color: rgba(255, 255, 255, 0.6); backdrop-filter: blur(5px); padding:10px 15px 10px 15px; border-radius:30px; margin:7px;">
+    
 			<br>
 			<div class="w-100 text-center" style="display: flex; justify-content: center; align-items: center;">
 				<div style="height: 140px; width: 140px; border-radius: 100%; text-align: center;">
@@ -101,6 +123,12 @@
 		</div>
 		<?php endforeach; ?>
 		</div>
+		<!-- Paginación de Bootstrap -->
+		<nav aria-label="Page navigation example">
+			<ul id="pagination" class="pagination justify-content-center">
+				<!-- Los elementos de la paginación se generarán automáticamente aquí -->
+			</ul>
+		</nav>
 	</div> 
 	
 	
@@ -121,7 +149,7 @@
 	
     }
 .f-buscar{
-	height:30px; 
+	height:340px; 
 	background-image: url('<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/ie-buscar.png'); /* Ruta de la imagen de fondo */
     background-size: cover; /* Ajustar la imagen al tamaño del contenedor */
     background-position: center; /* Posición de la imagen en el contenedor */
@@ -153,6 +181,60 @@
 #dBoton{
 	display:none;
 }
+
+// estilos de paginación
+
+/* Estilos generales para la paginación */
+#pagination {
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+}
+
+#pagination li {
+    display: inline-block;
+    margin-right: 5px; /* Espaciado entre elementos */
+}
+
+#pagination li a,
+#pagination li span {
+    color: #333; /* Color de texto predeterminado */
+    background-color: #fff; /* Color de fondo predeterminado */
+    border: 1px solid #ccc; /* Borde predeterminado */
+    padding: 8px 12px; /* Relleno interno */
+    text-decoration: none;
+}
+
+/* Estilo para el enlace activo */
+#pagination li.active a,
+#pagination li.active span {
+    color: #fff; /* Color de texto cuando está activo */
+    background-color: var(--color-principal); /* Color de fondo cuando está activo */
+    border-color: var(--color-principal); /* Borde cuando está activo */
+}
+
+/* Estilos para los botones Anterior y Siguiente */
+#pagination li#previous a,
+#pagination li#next a {
+    background-color: var(--color-principal); /* Color de fondo para Anterior y Siguiente */
+    border-color: var(--color-principal); /* Borde para Anterior y Siguiente */
+    color: #fff; /* Color de texto para Anterior y Siguiente */
+}
+
+/* Estilo para los botones Anterior y Siguiente cuando están deshabilitados */
+#pagination li#previous.disabled a,
+#pagination li#next.disabled a {
+    background-color: #ccc; /* Color de fondo para Anterior y Siguiente cuando están deshabilitados */
+    border-color: #ccc; /* Borde para Anterior y Siguiente cuando están deshabilitados */
+    color: #fff; /* Color de texto para Anterior y Siguiente cuando están deshabilitados */
+}
+
+/* Cambiar el color al pasar el ratón sobre los enlaces */
+#pagination li a:hover {
+    background-color: #eee; /* Color de fondo al pasar el ratón */
+}
+
+
+
 </style>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
@@ -166,7 +248,7 @@ $('#myModal').on('hidden.bs.modal', function (e) {
 </script>
 <script>
 function actualizarModal(desIndex) {
-    var des = <?php echo json_encode($destacados); ?>;
+    var des = <?php echo json_encode($destacadosAll); ?>;
     
     des.forEach(function(d) {
         if (d.id === desIndex) {
@@ -199,4 +281,88 @@ function descargarCV() {
         // Abre una nueva pestaña con el enlace proporcionado
         window.open(CV, '_blank');
     }
+
+</script>
+<script>
+function buscarDestacado() {
+    var sedeSeleccionada = $("select[name='sede']").val();
+    var carreraSeleccionada = $("select[name='carrera_u']").val();
+
+    // Filtrar según la búsqueda
+    var talentosFiltrados = <?php echo json_encode($destacadosAll); ?>.filter(function (talento) {
+        return (sedeSeleccionada === '0' || talento.sede_id === sedeSeleccionada) &&
+               (carreraSeleccionada === '0' || talento.carrera_id === carreraSeleccionada);
+    });
+
+    // Ocultar todos los elementos .col-lg-3
+    $("#resultados .col-lg-3").hide();
+    $("#pagination").hide();
+
+    // Mostrar solo los elementos correspondientes a talentosFiltrados
+    talentosFiltrados.forEach(function(talento) {
+        // Mostrar el elemento correspondiente a este talento filtrado
+        $("#resultados .col-lg-3[data-talento-id='" + talento.id + "']").show();
+    });
+}
+
+
+
+</script>
+<script>
+    $(document).ready(function () {
+        var items = $("#resultados .col-lg-3");
+        var numItems = items.length;
+        var perPage = 6;
+        var currentPage = 1;
+
+        items.slice(perPage).hide();
+
+        var totalPages = Math.ceil(numItems / perPage);
+
+        function generatePagination() {
+            $('#pagination').empty(); // Limpiamos la paginación actual antes de crear una nueva
+
+            // Agregamos el botón "Anterior"
+            $('#pagination').append('<li class="page-item disabled" id="previous"><a class="page-link" href="#alumni">Anterior</a></li>');
+
+            // Mostramos hasta un máximo de 3 páginas
+            var startPage = Math.max(1, currentPage - 1); // Aseguramos que no haya números negativos
+            var endPage = Math.min(totalPages, startPage + 2); // Mostramos un máximo de 3 páginas
+
+            for (var i = startPage; i <= endPage; i++) {
+                var activeClass = (i === currentPage) ? 'active' : ''; // Marcamos solo la página actual
+                $('#pagination').append('<li class="page-item ' + activeClass + '"><a class="page-link" href="#alumni">' + i + '</a></li>');
+            }
+
+            // Agregamos el botón "Siguiente"
+            $('#pagination').append('<li class="page-item" id="next"><a class="page-link" href="#alumni">Siguiente</a></li>');
+
+            // Deshabilitamos el botón "Anterior" en la primera página
+            $('#previous').toggleClass('disabled', currentPage === 1);
+
+            // Deshabilitamos el botón "Siguiente" en la última página
+            $('#next').toggleClass('disabled', currentPage === totalPages);
+        }
+
+        generatePagination();
+
+        $('#pagination').on('click', 'li', function () {
+            var clickedPage = $(this).text();
+
+            if ($(this).attr("id") === "previous") {
+                currentPage = Math.max(currentPage - 1, 1);
+            } else if ($(this).attr("id") === "next") {
+                currentPage = Math.min(currentPage + 1, totalPages);
+            } else {
+                currentPage = parseInt(clickedPage);
+            }
+
+            var showFrom = perPage * (currentPage - 1);
+            var showTo = showFrom + perPage;
+            items.hide().slice(showFrom, showTo).show();
+
+            // Regeneramos la paginación después de cambiar la página
+            generatePagination();
+        });
+    });
 </script>

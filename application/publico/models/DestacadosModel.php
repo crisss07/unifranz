@@ -20,6 +20,23 @@ class DestacadosModel extends CI_Model {
 				return array(); // Devolver un array vacío si no hay resultados
 			}
 		}
+		
+		public function getDestacadosAll(){
+			$this->db->select('des.*, se.sede as sede_u, ca.carrera as carrera_u');
+			$this->db->from('alumnos_destacados as des');
+			$this->db->join('sede as se', 'se.id=des.sede_id');
+			$this->db->join('carrera as ca', 'ca.id=des.carrera_id');
+			$this->db->order_by('des.datos_contacto', 'ASC'); 
+			$query = $this->db->get();
+			
+			// Verificar si hay resultados antes de devolverlos
+			if ($query->num_rows() > 0) {
+				return $query->result_array();
+			} else {
+				return array(); // Devolver un array vacío si no hay resultados
+			}
+		}
+		
 		public function getCarreras(){
 			$this->db->select('*');
 			$this->db->from('carrera');
@@ -33,4 +50,5 @@ class DestacadosModel extends CI_Model {
 				return array(); // Devolver un array vacío si no hay resultados
 			}
 		}
+		
 }
