@@ -61,7 +61,7 @@ class Inicio extends CI_Controller {
 				$destacados = array_merge($dLP , $dSC);
 				// print_r($this->reordenarD($destacados));exit();
 				 // print_r($dAll);exit();
-                $contenido['destacados'] = $this->reordenarD($destacados);
+                $contenido['destacados'] = $this->reordenarD($dAll);
                 $contenido['destacadosAll'] = $dAll;
                 $contenido['carreras'] = $carreras;
                 $data['contenido'] = $this->load->view('inicio/inicio-empresas', $contenido, true);

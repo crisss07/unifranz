@@ -98,7 +98,7 @@
 	<div id="alumni" style="margin-top:-120px;margin-bottom:120px;">
 	</div>
 	<div id="resultados" class="row justify-content-center m-0 b-0 montserrat-bold d-flex align-items-center f-estudiantes" style="padding-top:30px;padding-bottom:10%;line-height:16px;">
-		<?php foreach ($destacadosAll as $d): ?>	
+		<?php foreach ($destacados as $d): ?>	
 		<div class="col-lg-3 col-md-3 col-11 text-center text-white filtrado" data-talento-id="<?php echo $d['id']; ?>" style="background-color: rgba(255, 255, 255, 0.6); backdrop-filter: blur(5px); padding:10px 15px 10px 15px; border-radius:30px; margin:7px;">
     
 			<br>
@@ -289,7 +289,7 @@ function buscarDestacado() {
     var carreraSeleccionada = $("select[name='carrera_u']").val();
 
     // Filtrar según la búsqueda
-    var talentosFiltrados = <?php echo json_encode($destacadosAll); ?>.filter(function (talento) {
+    var talentosFiltrados = <?php echo json_encode($destacados); ?>.filter(function (talento) {
         return (sedeSeleccionada === '0' || talento.sede_id === sedeSeleccionada) &&
                (carreraSeleccionada === '0' || talento.carrera_id === carreraSeleccionada);
     });

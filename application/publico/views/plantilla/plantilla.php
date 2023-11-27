@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twbs-pagination/1.4.2/jquery.twbsPagination.min.css">
 	
     <!-- Incluye el script de Bootstrap (jQuery es requerido) -->
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twbs-pagination/1.4.2/jquery.twbsPagination.min.js"></script>
+
 	<!-- ANIMACIONES -->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -53,7 +52,7 @@
 		<br>  
 		<br>  
 		<br>  
-				<div class="row justify-content-end p-2" data-aos="fade-up" data-aos-delay="200">        
+				<div class="row justify-content-end p-2">        
 				  <div class="col-lg-1 col-md-1 col-2 p-1">
 					<a href="https://www.facebook.com/unifranz.edu" target="_blank">
 					  <img src="<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/rrss/fb.png" class="img-rrss" alt="unifranz">
@@ -77,10 +76,10 @@
 				</div>
 				<div class="row justify-content-end">        
 				  <div class="col-lg-8 col-md-8 col-11 p-1">
-					  <img src="<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/rrss/logo-pie.png" data-aos="flip-up" alt="unifranz">
+					  <img src="<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/rrss/logo-pie.png" alt="unifranz">
 				  </div> 
 				</div>
-				<div class="row justify-content-end montserrat-regular" data-aos="fade-up" data-aos-delay="300">        
+				<div class="row justify-content-end montserrat-regular">        
 				  <div class="col-lg-3 col-md-3 col-11 p-2">
 					<a href="https://api.whatsapp.com/send?phone=59171502211&text=%C2%A1Hola!%20Quiero%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20Red%20Alumni%20Unifranz" target="_blank" class="text-white u-none">
 					  <img src="<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/rrss/wp.png" class="img-rrss-2" alt="unifranz">
@@ -95,7 +94,7 @@
 				  </div> 
 				</div>
 				<br><br><br>  
-				<div class="row justify-content-end montserrat-regular text-white" data-aos="zoom-in" data-aos-delay="500">        
+				<div class="row justify-content-end montserrat-regular text-white" >        
 				  <div class="col-lg-3 col-md-3 col-11 text-center p-2">
 					<b>UNIFRANZ</b><br>
 					<a href="https://unifranz.edu.bo/" target="_blank" class="text-white u-none">
