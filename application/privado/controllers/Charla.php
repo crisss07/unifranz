@@ -40,15 +40,24 @@ class Charla extends CI_Controller {
         }
 	}
 
-	public function nuevo()
+	public function nuevo($idCodificado = null)
 	{
 		if (!isset($_SESSION['usuario_id'])){
             $this->load->view('login/login');
         }
         else {
-        	$contenido['inscritos'] = 'hola';
-			$data['contenido'] = $this->load->view('charla/nuevo', $contenido, true);
-			$this->load->view('plantilla/plantilla_privada', $data);
+        	if ($idCodificado !== null) {
+        		$id = base64_decode($idCodificado);
+	            $contenido['datos_charla'] = $this->CharlaModel->getDatosCharlaId($id);
+	            $contenido['nuevo'] = 'no';
+				$data['contenido'] = $this->load->view('charla/nuevo', $contenido, true);
+				$this->load->view('plantilla/plantilla_privada', $data);
+	        } else {
+	            $contenido['nuevo'] = 'si';
+				$data['contenido'] = $this->load->view('charla/nuevo', $contenido, true);
+				$this->load->view('plantilla/plantilla_privada', $data);
+	        }
+        	
         }
 	}
 
@@ -66,6 +75,7 @@ class Charla extends CI_Controller {
         if ($this->form_validation->run() == FALSE) {
             $data = array('error' => true, 'message' => $this->form_validation->error_array());
         } else {
+        	$id = $this->input->post('id_charla');
 	        $empresa = $this->input->post('empresa');
 	        $tema = $this->input->post('tema');
 	        $descripcion = $this->input->post('descripcion');
@@ -75,9 +85,18 @@ class Charla extends CI_Controller {
 	        $sede = $this->input->post('sede');
 	        $modalidad = $this->input->post('modalidad');
 	        $estado = $this->input->post('estado');
-	        $charla = $this->CharlaModel->registrar_charla($empresa, $tema, $descripcion, $expositor, $fecha, $horario, $sede, $modalidad, $estado);
+	        if (empty($id)) {
+			    $charla = $this->CharlaModel->registrar_charla($empresa, $tema, $descripcion, $expositor, $fecha, $horario, $sede, $modalidad, $estado);
+			} else {
+			    $charla = $this->CharlaModel->editar_charla($id, $empresa, $tema, $descripcion, $expositor, $fecha, $horario, $sede, $modalidad, $estado);
+			}
+	        
 	        if ($charla['estado']) {
-	        	$data = array('error' => false, 'message' => 'Se registro correctamente');
+	        	if ($charla['tipo'] == 'nuevo') {
+	        		$data = array('error' => false, 'message' => 'Se registro correctamente');
+	        	} else {
+	        		$data = array('error' => false, 'message' => 'Se edito correctamente');
+	        	}
 	        } else {
 	        	$data = array('error' => true, 'message' => 'Algo salio mal, vuelva a intentarlo');
 	        }

@@ -1,4 +1,15 @@
-
+<style type="text/css">
+    .boton-edit{
+        text-decoration: none; /* Quita el subrayado */
+        color: #333; /* Cambia el color del texto, puedes ajustar el valor según tus preferencias */
+    }
+    .boton-edit:hover {
+      color: #fa501e; /* Cambia el color del texto al pasar el mouse, puedes ajustar el valor según tus preferencias */
+    }
+    .boton-inscritos:hover {
+      color: #fa501e; /* Cambia el color del texto al pasar el mouse, puedes ajustar el valor según tus preferencias */
+    }
+</style>
 <!-- ==========================CONTENIDO========================== --> 
 <div class="row justify-content-center">
 	<div class="col-12">
@@ -25,6 +36,7 @@
                                         <th>Sede</th>
                                         <th>fecha</th>
                                         <th>Inscritos</th>
+                                        <th>Estado</th>
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
@@ -35,21 +47,28 @@
                                         <td><?php echo $num++; ?></td>
                                         <td><?php echo $value->empresa; ?></td>
                                         <td><?php echo $value->tema; ?></td>
-                                        <?php 
-                                            // $hoin = DateTime::createFromFormat('H:i:s', $value->hora_inicio);
-                                            // $hofi = DateTime::createFromFormat('H:i:s', $value->hora_fin);
-                                            // $hi = $hoin->format('H:i'); $hf = $hofi->format('H:i');  
-                                        ?>
                                         <td><?php echo $value->expositor; ?></td>
                                         <td><?php echo $value->sede; ?></td>
-                                        <!-- <td><?php echo $hi . ' - ' .  $hf; ?></td> -->
                                         <td><?php echo $value->fecha; ?></td>
                                         <?php if ($value->numero_inscritos > 0): ?>
-                                        <td><a href="<?php echo $this->tool_entidad->sitioadmin(); ?>Charla/inscritos/<?php echo base64_encode($value->id); ?>"><?php echo $value->numero_inscritos; ?></a></td>
+                                        <td><a href="<?php echo $this->tool_entidad->sitioadmin(); ?>Charla/inscritos/<?php echo base64_encode($value->id); ?>" class="boton-inscritos"><?php echo $value->numero_inscritos; ?></a></td>
                                         <?php else: ?>
                                         <td><?php echo $value->numero_inscritos; ?></td>
                                         <?php endif ?>
-                                        <td>acciones</td>
+                                        <?php if ($value->estado == 'activo'): ?>
+                                            <td>Activo</td>
+                                        <?php else: ?>
+                                            <?php if ($value->estado == 'inactivo'): ?>
+                                               <td style="color: #009efb;">Inactivo</td> 
+                                            <?php else: ?>
+                                                <td style="color: #f62d51;">Baja</td>
+                                            <?php endif ?>
+                                        <?php endif ?>
+                                        <td>
+                                            <a href="#" class="boton-edit" onclick="edit('<?php echo $value->id; ?>');">
+                                                <i class="far fa-edit"></i>
+                                            </a>
+                                        </td>
                                     </tr>
                                     <?php endforeach ?>
                                 </tbody>
@@ -72,8 +91,13 @@
     });
 
     function nueva_charla(){
-    var enlace  = '<?php echo $this->tool_entidad->sitioadmin(); ?>';
-    window.location.href = enlace+'Charla/nuevo';
+        var enlace  = '<?php echo $this->tool_entidad->sitioadmin(); ?>';
+        window.location.href = enlace+'Charla/nuevo';
+    }
 
+    function edit(id) {
+        var idCodificado = btoa(id);
+        var enlace  = '<?php echo $this->tool_entidad->sitioadmin(); ?>';
+        window.location.href = enlace+'Charla/nuevo/'+idCodificado;
     }
 </script>

@@ -17,24 +17,46 @@
                     <h4 class="mb-0 text-white">Nueva Charla</h4>
                 </div>
                 <form action="#" id="miFormulario">
-                    <!-- <div class="card-body">
-                        <h4 class="card-title">Person Info</h4>
-                    </div>
-                    <hr> -->
+                    <?php 
+                        if ($nuevo == 'si') {
+                            $id = '';
+                            $empresa = '';
+                            $tema = '';
+                            $descripcion = '';
+                            $expositor = '';
+                            $fecha = '';
+                            $horario = '';
+                            $sede = '';
+                            $modalidad = '';
+                            $estado = '';
+                        } else {
+                            $id = $datos_charla->id;
+                            $empresa = $datos_charla->empresa;
+                            $tema = $datos_charla->tema;
+                            $descripcion = $datos_charla->descripcion;
+                            $expositor = $datos_charla->expositor;
+                            $fecha = $datos_charla->fecha;
+                            $horario = $datos_charla->horario;
+                            $sede = $datos_charla->sede;
+                            $modalidad = $datos_charla->modalidad;
+                            $estado = $datos_charla->estado;
+                        }
+                    ?>
+                    <input type="hidden" name="id_charla" id="id_charla" value="<?php echo $id; ?>">
                     <div class="form-body">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="control-label">Empresa</label>
-                                        <input type="text" id="empresa" name="empresa" class="form-control" placeholder="nombre de la empresa">
+                                        <input type="text" id="empresa" name="empresa" class="form-control" placeholder="nombre de la empresa" value="<?php echo $empresa; ?>">
                                         <small class="form-control-feedback"> <span class="requerido">* campo requerido </span></small> 
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="control-label">Tema</label>
-                                        <input type="text" id="tema" name="tema" class="form-control" placeholder="tema de la charla">
+                                        <input type="text" id="tema" name="tema" class="form-control" placeholder="tema de la charla" value="<?php echo $tema; ?>">
                                         <small class="form-control-feedback"> <span class="requerido">* campo requerido </span></small> 
                                     </div>
                                 </div>
@@ -43,13 +65,13 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleFormControlTextarea1">Descripción</label>
-                                        <textarea class="form-control" id="descripcion" name="descripcion" rows="3"></textarea> 
+                                        <textarea class="form-control" id="descripcion" name="descripcion" rows="3"><?php echo $descripcion; ?></textarea> 
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleFormControlTextarea1">Expositor</label>
-                                        <textarea class="form-control" id="expositor" name="expositor" rows="3"></textarea>
+                                        <textarea class="form-control" id="expositor" name="expositor" rows="3"><?php echo $expositor; ?></textarea>
                                         <small class="form-control-feedback"> <span class="requerido">* campo requerido </span></small> 
                                     </div>
                                 </div>
@@ -58,14 +80,14 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="control-label">Fecha</label>
-                                        <input type="date" id="fecha" name="fecha" class="form-control">
+                                        <input type="date" id="fecha" name="fecha" class="form-control" value="<?php echo $fecha; ?>">
                                         <small class="form-control-feedback"> <span class="requerido">* campo requerido </span></small> 
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="control-label">Horario</label>
-                                        <input type="text" id="horario" name="horario" class="form-control" placeholder="ejemplo 08:00 a 09:00">
+                                        <input type="text" id="horario" name="horario" class="form-control" placeholder="ejemplo 08:00 a 09:00" value="<?php echo $horario; ?>">
                                         <small class="form-control-feedback"> <span class="requerido">* campo requerido </span></small> 
                                     </div>
                                 </div>
@@ -76,9 +98,9 @@
                                         <label for="exampleFormControlSelect1">Sede</label>
                                         <select class="form-control" id="sede" name="sede">
                                             <option value="">----Seleccione una Sede----</option>
-                                            <option value="La Paz - El Alto">La Paz - El Alto</option>
-                                            <option value="Santa Cruz">Santa Cruz</option>
-                                            <option value="Cochabamba">Cochabamba</option>
+                                            <option value="La Paz - El Alto" <?php echo ($sede == 'La Paz - El Alto') ? 'selected' : ''; ?>>La Paz - El Alto</option>
+                                            <option value="Santa Cruz" <?php echo ($sede == 'Santa Cruz') ? 'selected' : ''; ?>>Santa Cruz</option>
+                                            <option value="Cochabamba" <?php echo ($sede == 'Cochabamba') ? 'selected' : ''; ?>>Cochabamba</option>
                                         </select>
                                         <small class="form-control-feedback"> <span class="requerido">* campo requerido </span></small> 
                                     </div>
@@ -86,7 +108,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="control-label">Modalidad</label>
-                                        <input type="text" id="modalidad" name="modalidad" class="form-control" placeholder="modalidad">
+                                        <input type="text" id="modalidad" name="modalidad" class="form-control" placeholder="modalidad" value="<?php echo $modalidad; ?>">
                                         <small class="form-control-feedback"> <span class="requerido">* campo requerido </span></small> 
                                     </div>
                                 </div>
@@ -96,8 +118,11 @@
                                     <div class="form-group">
                                         <label for="exampleFormControlSelect1">Estado</label>
                                         <select class="form-control" id="estado" name="estado">
-                                            <option value="activo">Activo</option>
-                                            <option value="inactivo">Inactivo</option>
+                                            <option value="activo" <?php echo ($estado == 'activo') ? 'selected' : ''; ?>>Activo</option>
+                                            <option value="inactivo" <?php echo ($estado == 'inactivo') ? 'selected' : ''; ?>>Inactivo</option>
+                                            <?php if ($nuevo == 'no'): ?>
+                                            <option value="baja" <?php echo ($estado == 'baja') ? 'selected' : ''; ?>>Baja</option>   
+                                            <?php endif ?>
                                         </select>
                                         <small class="form-control-feedback"> <span class="requerido">* campo requerido </span></small> 
                                     </div>

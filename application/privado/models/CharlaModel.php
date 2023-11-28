@@ -6,7 +6,7 @@ class CharlaModel extends CI_Model {
         $this->db->select('cha.*, COUNT(ic.charla_id) as numero_inscritos');
         $this->db->from('charlas as cha');
         $this->db->join('inscritos_charlas as ic', 'cha.id = ic.charla_id', 'left');
-        $this->db->where('cha.estado', 'activo');
+        // $this->db->where('cha.estado', 'activo');
         $this->db->group_by('cha.id'); // Corregir para agrupar por el ID de charla
         $this->db->order_by('cha.id', 'DESC');
         $resultado = $this->db->get()->result();
@@ -33,6 +33,14 @@ class CharlaModel extends CI_Model {
         $resultado = $this->db->get()->result();
         return $resultado;
     }
+
+    public function getDatosCharlaId($id) {
+        $this->db->select('cha.*');
+        $this->db->from('charlas as cha');
+        $this->db->where('cha.id', $id);
+        $resultado = $this->db->get()->row();
+        return $resultado;
+    }
     
     public function registrar_charla($empresa, $tema, $descripcion, $expositor, $fecha, $horario, $sede, $modalidad, $estado) {
         $data = array(    
@@ -53,7 +61,33 @@ class CharlaModel extends CI_Model {
         $nuevoId = $this->db->insert_id();
 
         if ($nuevoId > 0) {
-            $respuesta = array('estado'=>true);
+            $respuesta = array('estado'=>true, 'tipo'=>'nuevo');
+            return $respuesta; // Registro válidas
+        } else {
+            $respuesta = array('estado'=>false);
+            return $respuesta; // Registro inválidas
+        }
+    }
+
+    public function editar_charla($id, $empresa, $tema, $descripcion, $expositor, $fecha, $horario, $sede, $modalidad, $estado) {
+        $data = array(    
+            'empresa' => $empresa,
+            'tema' => $tema,
+            'descripcion' => $descripcion,
+            'expositor' => $expositor,
+            'fecha' => $fecha,
+            'horario' => $horario,
+            'sede' => $sede,
+            'modalidad' => $modalidad,
+            'estado' => $estado
+        );
+        $this->db->set('fecha_edicion', 'NOW()', FALSE);
+        $this->db->where('id', $id);
+        $this->db->update('charlas', $data);
+
+        // Verificar si la actualización fue exitosa
+        if ($this->db->affected_rows() > 0) {
+            $respuesta = array('estado'=>true, 'tipo'=>'edicion');
             return $respuesta; // Registro válidas
         } else {
             $respuesta = array('estado'=>false);
