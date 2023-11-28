@@ -10,6 +10,9 @@
             </div>
             <div class="card-body">
                 <div class="card">
+                    <div align="right" style="margin-right: 20px;">
+                        <button type="button" class="btn btn-outline-success" onclick="nueva_charla();"><i class="fas fa-plus"></i> Nueva Charla</button>
+                    </div>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table" id="miTabla">
@@ -67,4 +70,10 @@
             }
         });
     });
+
+    function nueva_charla(){
+    var enlace  = '<?php echo $this->tool_entidad->sitioadmin(); ?>';
+    window.location.href = enlace+'Charla/nuevo';
+
+    }
 </script>

@@ -33,4 +33,31 @@ class CharlaModel extends CI_Model {
         $resultado = $this->db->get()->result();
         return $resultado;
     }
+    
+    public function registrar_charla($empresa, $tema, $descripcion, $expositor, $fecha, $horario, $sede, $modalidad, $estado) {
+        $data = array(    
+            'empresa' => $empresa,
+            'tema' => $tema,
+            'descripcion' => $descripcion,
+            'expositor' => $expositor,
+            'fecha' => $fecha,
+            'horario' => $horario,
+            'sede' => $sede,
+            'modalidad' => $modalidad,
+            'estado' => $estado
+        );
+        $this->db->set('fecha_creacion', 'NOW()', FALSE);
+        $this->db->insert('charlas', $data);
+
+        // Obtener el ID recién insertado
+        $nuevoId = $this->db->insert_id();
+
+        if ($nuevoId > 0) {
+            $respuesta = array('estado'=>true);
+            return $respuesta; // Registro válidas
+        } else {
+            $respuesta = array('estado'=>false);
+            return $respuesta; // Registro inválidas
+        }
+    }
 }
