@@ -168,14 +168,13 @@
                     });
                 } else {
                     Swal.fire({
-                          title: 'Bien',
+                          title: 'Correcto',
                           text: data.message,
                           icon: 'success',
-                          confirmButtonColor: '#3085d6', // Cambia el color del botón OK
-                          confirmButtonText: 'Ok' // Cambia el texto del botón OK
+                          confirmButtonColor: '#3085d6', 
+                          confirmButtonText: 'Ok' 
                       }).then((result) => {
                           if (result.isConfirmed) {
-                              // Redirige a otro lugar cuando se hace clic en el botón OK
                               window.location.href = enlace+'Charla';
                           }
                       });
@@ -190,14 +189,13 @@
             duration: 5000,
             newWindow: true,
             close: true,
-            gravity: "top", // `top` or `bottom`
-            position: "right", // `left`, `center` or `right`
-            stopOnFocus: true, // Prevents dismissing of toast on hover
+            gravity: "top",
+            position: "right", 
+            stopOnFocus: true, 
             style: {
                 background: "linear-gradient(to right, #9f1b1b, #b24949)",
-            
             },
-            onClick: function(){} // Callback after click
+            onClick: function(){} 
         }).showToast();
     }
 </script>

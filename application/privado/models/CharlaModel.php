@@ -94,4 +94,18 @@ class CharlaModel extends CI_Model {
             return $respuesta; // Registro inválidas
         }
     }
+
+    public function eliminar_inscrito($id) {
+        $this->db->where('id', $id);
+        $this->db->delete('inscritos_charlas');
+
+        // Verificar si la eliminación fue exitosa
+        if ($this->db->affected_rows() > 0) {
+            $respuesta = array('estado' => true);
+            return $respuesta; // Registro eliminado
+        } else {
+            $respuesta = array('estado' => false);
+            return $respuesta; // No se pudo eliminar el registro
+        }
+    }
 }

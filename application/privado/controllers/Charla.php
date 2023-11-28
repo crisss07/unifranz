@@ -32,8 +32,11 @@ class Charla extends CI_Controller {
         }
         else {
         	$idCharla = base64_decode($idCharlaEncriptado);
+        	// var_dump($idCharla);
+        	// exit;
 
         	$contenido['titulo'] = $this->CharlaModel->getDatosTitulo($idCharla);
+        	$contenido['idCharla'] = $idCharla;
         	$contenido['inscritos'] = $inscritos = $this->CharlaModel->getDatosInscritos($idCharla);
 			$data['contenido'] = $this->load->view('charla/charla_inscritos', $contenido, true);
 			$this->load->view('plantilla/plantilla_privada', $data);
@@ -105,4 +108,20 @@ class Charla extends CI_Controller {
       
         echo json_encode($data);
 	}
+
+	public function eliminar_inscrito()
+	{
+        $idCharlaEncriptado = $this->input->post('id');
+        $id = base64_decode($idCharlaEncriptado);
+        $charla = $this->CharlaModel->eliminar_inscrito($id);
+        
+        if ($charla['estado']) {
+        	$data = array('error' => false, 'message' => 'Se elimino el registro correctamente');
+        } else {
+        	$data = array('error' => true, 'message' => 'No se pudo eliminar el registro');
+        }
+      
+        echo json_encode($data);
+	}
+	
 }

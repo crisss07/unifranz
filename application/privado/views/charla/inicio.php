@@ -51,9 +51,11 @@
                                         <td><?php echo $value->sede; ?></td>
                                         <td><?php echo $value->fecha; ?></td>
                                         <?php if ($value->numero_inscritos > 0): ?>
-                                        <td><a href="<?php echo $this->tool_entidad->sitioadmin(); ?>Charla/inscritos/<?php echo base64_encode($value->id); ?>" class="boton-inscritos"><?php echo $value->numero_inscritos; ?></a></td>
+                                            <td>
+                                                <a href="<?php echo $this->tool_entidad->sitioadmin(); ?>Charla/inscritos/<?php echo base64_encode($value->id); ?>" class="boton-inscritos" data-toggle="tooltip" data-original-title="Ver Inscritos"><?php echo $value->numero_inscritos; ?></a>
+                                            </td>
                                         <?php else: ?>
-                                        <td><?php echo $value->numero_inscritos; ?></td>
+                                            <td><?php echo $value->numero_inscritos; ?></td>
                                         <?php endif ?>
                                         <?php if ($value->estado == 'activo'): ?>
                                             <td>Activo</td>
@@ -66,7 +68,7 @@
                                         <?php endif ?>
                                         <td>
                                             <a href="#" class="boton-edit" onclick="edit('<?php echo $value->id; ?>');">
-                                                <i class="far fa-edit"></i>
+                                                <i class="far fa-edit" data-toggle="tooltip" data-original-title="Editar Charla"></i>
                                             </a>
                                         </td>
                                     </tr>
