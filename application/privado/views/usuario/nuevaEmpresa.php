@@ -15,109 +15,80 @@
            	<div class="card">
                 <div class="card-header" style="background-color: #13064f;">
                     <?php if ($nuevo == 'si'): ?>
-                        <h4 class="mb-0 text-white">Nueva Charla</h4>
+                        <h4 class="mb-0 text-white">Nueva Empresa</h4>
                     <?php else: ?>
-                        <h4 class="mb-0 text-white">Editar Charla</h4>
+                        <h4 class="mb-0 text-white">Editar Empresa</h4>
                     <?php endif ?>
+                    
                 </div>
                 <form action="#" id="miFormulario">
                     <?php 
                         if ($nuevo == 'si') {
                             $id = '';
-                            $empresa = '';
-                            $tema = '';
-                            $descripcion = '';
-                            $expositor = '';
-                            $fecha = '';
-                            $horario = '';
-                            $sede = '';
-                            $modalidad = '';
+                            $razon_social = '';
+                            $nit = '';
+                            $tipo_empresa = '';
+                            $telefono = '';
+                            $direccion = '';
+                            $usuario = '';
+                            $contrasena = '';
                             $estado = '';
+
                         } else {
-                            $id = $datos_charla->id;
-                            $empresa = $datos_charla->empresa;
-                            $tema = $datos_charla->tema;
-                            $descripcion = $datos_charla->descripcion;
-                            $expositor = $datos_charla->expositor;
-                            $fecha = $datos_charla->fecha;
-                            $horario = $datos_charla->horario;
-                            $sede = $datos_charla->sede;
-                            $modalidad = $datos_charla->modalidad;
-                            $estado = $datos_charla->estado;
+                            $id = $datos_empresa->id;
+                            $razon_social = $datos_empresa->razon_social;
+                            $nit = $datos_empresa->nit;
+                            $tipo_empresa = $datos_empresa->tipo_empresa;
+                            $telefono = $datos_empresa->telefono;
+                            $direccion = $datos_empresa->direccion;
+                            $usuario = $datos_empresa->usuario;
+                            $contrasena = $datos_empresa->contrasena;
+                            $estado = $datos_empresa->estado;
                         }
                     ?>
-                    <input type="hidden" name="id_charla" id="id_charla" value="<?php echo $id; ?>">
+                    <input type="hidden" name="id_empresa" id="id_empresa" value="<?php echo $id; ?>">
                     <div class="form-body">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="control-label">Empresa</label>
-                                        <input type="text" id="empresa" name="empresa" class="form-control" placeholder="nombre de la empresa" value="<?php echo $empresa; ?>">
+                                        <label class="control-label">Razon Social</label>
+                                        <input type="text" id="razon_social" name="razon_social" class="form-control" placeholder="razon social" value="<?php echo $razon_social; ?>">
                                         <small class="form-control-feedback"> <span class="requerido">* campo requerido </span></small> 
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="control-label">Tema</label>
-                                        <input type="text" id="tema" name="tema" class="form-control" placeholder="tema de la charla" value="<?php echo $tema; ?>">
-                                        <small class="form-control-feedback"> <span class="requerido">* campo requerido </span></small> 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleFormControlTextarea1">Descripción</label>
-                                        <textarea class="form-control" id="descripcion" name="descripcion" rows="3"><?php echo $descripcion; ?></textarea> 
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleFormControlTextarea1">Expositor</label>
-                                        <textarea class="form-control" id="expositor" name="expositor" rows="3"><?php echo $expositor; ?></textarea>
-                                        <small class="form-control-feedback"> <span class="requerido">* campo requerido </span></small> 
+                                        <label class="control-label">NIT</label>
+                                        <input type="text" id="nit" name="nit" class="form-control" placeholder="número de nit" value="<?php echo $nit; ?>">
+                                        <!-- <small class="form-control-feedback"> <span class="requerido">* campo requerido </span></small>  -->
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="control-label">Fecha</label>
-                                        <input type="date" id="fecha" name="fecha" class="form-control" value="<?php echo $fecha; ?>">
-                                        <small class="form-control-feedback"> <span class="requerido">* campo requerido </span></small> 
+                                        <label class="control-label">Tipo de Empresa</label>
+                                        <input type="text" id="tipo_empresa" name="tipo_empresa" class="form-control" placeholder="tipo" value="<?php echo $tipo_empresa; ?>">
+                                        <!-- <small class="form-control-feedback"> <span class="requerido">* campo requerido </span></small>  -->
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="control-label">Horario</label>
-                                        <input type="text" id="horario" name="horario" class="form-control" placeholder="ejemplo 08:00 a 09:00" value="<?php echo $horario; ?>">
-                                        <small class="form-control-feedback"> <span class="requerido">* campo requerido </span></small> 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleFormControlSelect1">Sede</label>
-                                        <select class="form-control" id="sede" name="sede">
-                                            <option value="">----Seleccione una Sede----</option>
-                                            <option value="La Paz - El Alto" <?php echo ($sede == 'La Paz - El Alto') ? 'selected' : ''; ?>>La Paz - El Alto</option>
-                                            <option value="Santa Cruz" <?php echo ($sede == 'Santa Cruz') ? 'selected' : ''; ?>>Santa Cruz</option>
-                                            <option value="Cochabamba" <?php echo ($sede == 'Cochabamba') ? 'selected' : ''; ?>>Cochabamba</option>
-                                        </select>
-                                        <small class="form-control-feedback"> <span class="requerido">* campo requerido </span></small> 
-                                    </div>
-                                </div>    
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="control-label">Modalidad</label>
-                                        <input type="text" id="modalidad" name="modalidad" class="form-control" placeholder="modalidad" value="<?php echo $modalidad; ?>">
-                                        <small class="form-control-feedback"> <span class="requerido">* campo requerido </span></small> 
+                                        <label class="control-label">Teléfono</label>
+                                        <input type="text" id="telefono" name="telefono" class="form-control" placeholder="número telefónico" value="<?php echo $telefono; ?>">
+                                        <!-- <small class="form-control-feedback"> <span class="requerido">* campo requerido </span></small>  -->
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Dirección</label>
+                                        <input type="text" id="direccion" name="direccion" class="form-control" placeholder="dirección empresa" value="<?php echo $direccion; ?>">
+                                        <!-- <small class="form-control-feedback"> <span class="requerido">* campo requerido </span></small>  -->
+                                    </div>
+                                </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleFormControlSelect1">Estado</label>
@@ -130,14 +101,32 @@
                                         </select>
                                         <small class="form-control-feedback"> <span class="requerido">* campo requerido </span></small> 
                                     </div>
-                                </div>    
+                                </div>  
                             </div>
+                            <?php if ($nuevo == 'si'): ?>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Usuario</label>
+                                        <input type="text" id="usuario" name="usuario" class="form-control" placeholder="nombre de usuario" value="<?php echo $usuario; ?>">
+                                        <small class="form-control-feedback"> <span class="requerido">* campo requerido </span></small> 
+                                    </div>
+                                </div>   
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Contraseña</label>
+                                        <input type="text" id="contrasena" name="contrasena" class="form-control" placeholder="contraseña" value="<?php echo $contrasena; ?>">
+                                        <small class="form-control-feedback"> <span class="requerido">* campo requerido </span></small> 
+                                    </div>
+                                </div>
+                            </div>
+                            <?php endif ?>
                         </div>
 
                         <div class="form-actions" align="center">
                             <div class="card-body">
                                 <button type="button" class="btn btn-success" onclick="guardar()"> <i class="fa fa-check"></i> Guardar</button>
-                                <a href="<?php echo $this->tool_entidad->sitioadmin(); ?>Charla" class="btn btn-dark">Cancelar</a>
+                                <a href="<?php echo $this->tool_entidad->sitioadmin(); ?>UsuariosEmpresa" class="btn btn-dark">Cancelar</a>
                             </div>
                         </div>
                     </div>
@@ -161,7 +150,7 @@
         var formData = $('#miFormulario').serialize();
         var enlace  = '<?php echo $this->tool_entidad->sitioadmin(); ?>';
         $.ajax({
-            url: enlace+'Charla/registrar_nuevo',
+            url: enlace+'UsuariosEmpresa/registrar_nuevo',
             type: 'POST',
             dataType: 'json',
             data: formData,
@@ -179,7 +168,7 @@
                           confirmButtonText: 'Ok' 
                       }).then((result) => {
                           if (result.isConfirmed) {
-                              window.location.href = enlace+'Charla';
+                              window.location.href = enlace+'UsuariosEmpresa';
                           }
                       });
                 }
