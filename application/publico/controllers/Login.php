@@ -172,9 +172,48 @@ class Login extends CI_Controller {
 
     }
 
-    public function contras($contrasena){
+    public function contras(){
+        $contrasena = "Empresa76*";
         $hash = password_hash($contrasena, PASSWORD_BCRYPT);
         echo $hash;
+    }
+
+    // envio de correo recuperar contraseña
+    function envioCorreoRecuperarContrasenaPrueba() 
+    {   
+        $nombres = 'Cristian';
+        $apellidos = 'Chamby';
+        $email = 'cchamby@dibeltecnologia.com';
+        $contrasena = '132';
+        $fecha=date('Y-m-d');
+        $hora=date('h:i:s');
+        $curl = curl_init();
+            curl_setopt_array($curl, array(
+                CURLOPT_URL => 'https://appserv.danaconnect.com/api/1.0/rest/conversation/424435/start/data',
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => '',
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 0,
+                CURLOPT_FOLLOWLOCATION => true,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => 'POST',
+                CURLOPT_POSTFIELDS =>'{
+                    "UNIF-RECU-PASS_NOMBRES": "'.$nombres.'",
+                    "UNIF-RECU-PASS_APELLIDOS": "'.$apellidos.'",
+                    "UNIF-RECU-PASS_CORREO": "'.$email.'",
+                    "UNIF-RECU-PASS_CONTRASEÑA": "'.$contrasena.'",
+                    "UNIF-RECU-PASS_FECHA": "'.$fecha.'",
+                    "UNIF-RECU-PASS_HORA": "'.$hora.'"
+                }',
+                CURLOPT_HTTPHEADER => array(
+                    'Authorization: Basic d2Vic2VydmljZXNAZGliZWw6RDFiM2w5cDFzLg==',
+                    'Content-Type: application/json'
+                  ),
+            ));
+
+        $response = curl_exec($curl);
+        echo $response;
+        curl_close($curl);
     }
 
 }
