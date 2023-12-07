@@ -80,6 +80,7 @@
 		<select name="sede" class="combo-blanco">
 			<option value="1">La Paz</option>
 			<option value="2">El Alto</option>
+			<option value="3">Cochabamba</option>
 		</select>
 		</div>
 		<div class="col-lg-3 col-md-3 col-11 text-start text-white">

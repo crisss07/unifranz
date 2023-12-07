@@ -31,8 +31,9 @@ class Inicio extends CI_Controller {
                     $_SESSION['nombres'] = $user->nombres;
                     $_SESSION['rol'] = $user->rol;
                 }
-    			$contenido['charlasLP'] = $this->ProgramasModel->getProgramas("La Paz - El Alto");
-    			$contenido['charlasSC'] = $this->ProgramasModel->getProgramas("Santa Cruz");
+    			// $contenido['charlasLP'] = $this->ProgramasModel->getProgramas("La Paz - El Alto");
+    			// $contenido['charlasSC'] = $this->ProgramasModel->getProgramas("Santa Cruz");
+    			$contenido['charlas'] = $this->ProgramasModel->getProgramas("Cochabamba");
     			$data['contenido'] = $this->load->view('inicio/inicio', $contenido, true);
     			$this->load->view('plantilla/plantilla', $data);
                 // echo 'hola desde pagina inicio '.$_SESSION['nombres'];
@@ -56,9 +57,12 @@ class Inicio extends CI_Controller {
                 }
                 $carreras = $this->DestacadosModel->getCarreras(1);
                 $dLP = $this->DestacadosModel->getDestacados(1);
-                $dSC = $this->DestacadosModel->getDestacados(2);
+                $dEA = $this->DestacadosModel->getDestacados(2);
+                $dCB = $this->DestacadosModel->getDestacados(3);
+                // $dSC = $this->DestacadosModel->getDestacados(4);
                 $dAll = $this->DestacadosModel->getDestacadosAll();
-				$destacados = array_merge($dLP , $dSC);
+				$destacados = array_merge($dLP , $dEA, $dCB);
+				// $destacados = array_merge($dLP , $dEA, $dCB, $dSC);
 				// print_r($this->reordenarD($destacados));exit();
 				 // print_r($dAll);exit();
                 $contenido['destacados'] = $this->reordenarD($dAll);

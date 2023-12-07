@@ -60,7 +60,8 @@
 	</div>    
 	</div> 
 	<div class="container-fluid m-0 p-0" style="background-color:#f3f3f3;">	
-	<div class="row justify-content-center m-0 b-0 montserrat-regular p-2" style="padding-top:60px;padding-bottom:60px;">        
+	<div class="row justify-content-center m-0 b-0 montserrat-regular p-2" style="padding-top:60px;padding-bottom:60px;">      
+	<!---
         <div class="col-lg-5 col-md-5 col-12 text-center"><br>
 			<div class="row justify-content-center m-0 b-0 montserrat-regular d-flex align-items-center" >   
 				<br><br>			
@@ -143,10 +144,7 @@
 							</div>
 							<div class="col-lg-2 col-md-2 col-3">
 								<svg data-toggle="modal" data-target="#exampleModalCenter" class="ver-cro" data-charla="<?php echo $charla['id']; ?>" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
-								  <!-- Círculo con fondo naranja -->
 								  <circle cx="25" cy="25" r="20" fill="var(--color-principal)" />
-
-								  <!-- Icono de "+" -->
 								  <text x="17" y="37" font-family="Arial" font-size="30" fill="white">+</text>
 								</svg>
 							</div>
@@ -232,10 +230,57 @@
 							</div>
 							<div class="col-lg-2 col-md-2 col-3">
 								<svg data-toggle="modal" data-target="#exampleModalCenter" class="ver-cro" data-charla="<?php echo $charla['id']; ?>" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
-								  <!-- Círculo con fondo naranja -->
 								  <circle cx="25" cy="25" r="20" fill="var(--color-principal)" />
-
-								  <!-- Icono de "+" -->
+								  <text x="17" y="37" font-family="Arial" font-size="30" fill="white">+</text>
+								</svg>
+							</div>
+						</div>
+						<?php endforeach; ?>
+						<br>
+					</div>
+				</div>
+				<br><br>
+				<div class="col-lg-12 col-md-12 col-11 fondo-c1" style="border-radius:0 0 30px 30px;">
+					<br>
+					<br>
+				</div>
+			</div>
+		</div>
+		----->
+		
+		<div class="col-lg-5 col-md-5 col-12 text-center"><br>
+			<div class="row justify-content-center m-0 b-0 montserrat-regular d-flex align-items-center" >   
+				<br><br>			
+				<div class="col-lg-12 col-md-12 col-11 bg-white" style="border-radius:30px 30px 0 0;">
+				<br>
+					<div class="text-center arialmt-b colort-2">
+						<h2 class="colort-1" style="line-height:20px;">PROGRAMA</h2>
+						<h2>COCHABAMBA</h2>
+					</div>
+					<div>
+						<h5 class="colort-1 montserrat-bold">Viernes 8 de Diciembre</h5>
+						
+						<?php foreach ($charlas as $charla): ?>
+						<br>
+						<div class="row justify-content-center m-0 b-0 montserrat-medium" style="text-align:left; line-height:16px;padding-left:10px;">
+							<div class="col-lg-3 col-md-3 col-12">
+							<p class="colort-4">
+							<?php echo $charla['horario']; ?>
+							</p>
+							</div>
+							<div class="col-lg-1 col-md-1 col-1" style="border-left:1px solid var(--color-principal-4);">
+							</div>
+							<div class="col-lg-6 col-md-6 col-7" style="text-align:left; line-height:16px;">
+								<b class="colort-1">
+								<?php echo $charla['tema']; ?>
+								</b>
+								<p class="colort-4">
+								<?php echo $charla['expositor']; ?>
+								</p>
+							</div>
+							<div class="col-lg-2 col-md-2 col-3">
+								<svg data-toggle="modal" data-target="#exampleModalCenter" class="ver-cro" data-charla="<?php echo $charla['id']; ?>" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+								  <circle cx="25" cy="25" r="20" fill="var(--color-principal)" />
 								  <text x="17" y="37" font-family="Arial" font-size="30" fill="white">+</text>
 								</svg>
 							</div>
@@ -327,26 +372,31 @@ $('#myModal').on('hidden.bs.modal', function (e) {
 })
 </script>
 <?php 
-	$charlas = array_merge($charlasLP , $charlasSC);
+	// $charlas = array_merge($charlasLP , $charlasSC);
+	$charlas = array_merge($charlas);
 	// print_r($charlas);
 ?>
 <script>
     function actualizarModal(charlaIndex) {
-        var charla = <?php echo json_encode($charlas); ?>[charlaIndex];
-        if(charla.id!=0){
-        document.getElementById('charlaId').value = charla.id;
-        }
-        document.getElementById('charlaHorario').innerText = charla.horario;
-        document.getElementById('charlaTema').innerText = charla.tema;
-        document.getElementById('charlaExpositor').innerText = charla.expositor;
-        document.getElementById('charlaDescripcion').innerText = charla.descripcion;
+		// alert(charlaIndex);
+        var charla = <?php echo json_encode($charlas); ?>;
+	    charla.forEach(function(d) {
+			// alert(d.id);
+			if (d.id === charlaIndex) {
+				document.getElementById('charlaId').value = d.id;
+				document.getElementById('charlaHorario').innerText = d.horario;
+				document.getElementById('charlaTema').innerText = d.tema;
+				document.getElementById('charlaExpositor').innerText = d.expositor;
+				document.getElementById('charlaDescripcion').innerText = d.descripcion;
+			}
+		});
     }
 
     var buttons = document.querySelectorAll('[data-toggle="modal"]');
     buttons.forEach(function(button) {
         button.addEventListener('click', function() {
             var charlaIndex = this.getAttribute('data-charla');
-            actualizarModal(charlaIndex-1);
+            actualizarModal(charlaIndex);
         });
     });
     

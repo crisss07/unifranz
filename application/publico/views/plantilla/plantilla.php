@@ -12,6 +12,16 @@
 	<!-- ANIMACIONES -->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	
+	<!-- Google tag (gtag.js) -->
+	<script async src=https://www.googletagmanager.com/gtag/js?id=G-PBNZ2PBM11></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-PBNZ2PBM11');
+	</script>
 
     <title>UNIFRANZ</title>
 </head>
