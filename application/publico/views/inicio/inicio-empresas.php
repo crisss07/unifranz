@@ -74,27 +74,32 @@
 	</div>    
 	</div> 	
 	<div class="row justify-content-center m-0 b-0 montserrat-medium d-flex align-items-center f-buscar" style="padding-top:30px;padding-bottom:30px;">        
-        <div class="col-lg-3 col-md-3">&nbsp;</div>
-        <div class="col-lg-3 col-md-3 col-11 text-start text-white">
-		<h6>SEDE UNIFRANZ</h6>
-		<select name="sede" class="combo-blanco">
-			<option value="1">La Paz</option>
-			<option value="2">El Alto</option>
-			<option value="3">Cochabamba</option>
-		</select>
-		</div>
-		<div class="col-lg-3 col-md-3 col-11 text-start text-white">
-		<h6 class="">CARRERA</h6>
-		<select name="carrera_u" class="combo-blanco">
-			<?php foreach ($carreras as $c): ?>	
-			<option value="<?php echo $c['id']; ?>"><?php echo $c['carrera']; ?></option>
-			<?php endforeach; ?>
-		</select>
-		</div>
-		 <div class="col-lg-3 col-md-3">&nbsp;</div>
-		<div class="col-lg-6 col-md-6 col-11 m-0 text-center text-white">
-		<button type="submit" class="text-white btn-buscar" onclick="buscarDestacado()">BUSCAR TALENTO</button>
-		</div>
+			<div class="col-lg-3 col-md-4 col-11 text-center text-white m-3 p-0">
+				<img src="<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/portada-socio.png" style="width:250px; height:auto;" alt="unifranz">
+				<br><br>
+				<a class="text-white btn-buscar" style="text-decoration:none;" target="_blank" href="<?php echo $this->tool_entidad->sitio(); ?>/archivos/programa-socio-formador.pdf">SOCIO FORMADOR</a>
+			</div>
+			<div class="col-lg-1 col-md-1">&nbsp;</div>
+			<div class="col-lg-4 col-md-4 col-11 text-start text-white m-3">
+			<h6>SEDE UNIFRANZ</h6>
+			<select name="sede" class="combo-blanco">
+				<option value="1">La Paz</option>
+				<option value="2">El Alto</option>
+				<option value="3">Cochabamba</option>
+			</select>
+			<br><br>
+			<h6 class="">CARRERA</h6>
+			<select name="carrera_u" class="combo-blanco">
+				<?php foreach ($carreras as $c): ?>	
+				<option value="<?php echo $c['id']; ?>"><?php echo $c['carrera']; ?></option>
+				<?php endforeach; ?>
+			</select>
+			<br><br>
+			<div class="text-center">
+			<button type="submit" class="text-white btn-buscar" onclick="buscarDestacado()">BUSCAR TALENTO</button>
+			</div>
+			<br>
+			</div>	
     </div>  
 	<div id="alumni" style="margin-top:-120px;margin-bottom:120px;">
 	</div>
@@ -150,10 +155,9 @@
 	
     }
 .f-buscar{
-	height:340px; 
 	background-image: url('<?php echo $this->tool_entidad->sitio(); ?>files/web/imagenes/ie-buscar.png'); /* Ruta de la imagen de fondo */
     background-size: cover; /* Ajustar la imagen al tamaño del contenedor */
-    background-position: center; /* Posición de la imagen en el contenedor */
+    background-position: right; /* Posición de la imagen en el contenedor */
 }
 .f-estudiantes{
 	height:auto; 
